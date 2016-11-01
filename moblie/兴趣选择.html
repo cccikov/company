@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>兴趣选择</title>
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/base.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $(".part").each(function(item,key){
+                var that = $(key).css("height","auto");
+                that.attr("data-height",that.height());
+                that.attr("style",that.attr("style").replace(/\s+/g,"").replace("height:auto;",""));//去除css样式height
+                $("#xingquxuanze").css("opacity",1);
+            });
+            $(".arrow i").on("click",function(){
+                var that  = $(this);
+                var part = that.parents(".part");
+                if(part.is(".active")){
+                    part.attr("style",part.attr("style").replace(/\s+/g,"").replace("height:"+part.attr("data-height")+"px;","")).removeClass("active");//去除css样式height
+                }else{
+                    part.css("height",part.attr("data-height")).addClass("active");
+                }
+            });
+            $(".filter li").on("click",function(){
+                var that = $(this);
+                if (that.is(".active")) {
+                    that.removeClass("active");
+                }else{
+                    that.addClass("active");
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="xingquxuanze">
+        <div class="head">
+            <h1>兴趣选择(可多选)</h1>
+        </div>
+        <div class="main filter">
+            <!-- 品名 -->
+            <div class="part part1">
+                <p><span>品名</span><i></i></p>
+                <ul class="clearfix">
+                    <li>热轧卷材</li>
+                    <li>冷轧卷材</li>
+                </ul>
+            </div>
+
+            <!-- 品牌 -->
+            <div class="part">
+                <p><span>品牌</span><i></i></p>
+                <ul class="clearfix">
+                    <li>山东宏旺</li>
+                    <li>宏旺</li>
+                    <li>联众</li>
+                </ul>
+            </div>
+
+            <!-- 材质 -->
+            <div class="part arrow">
+                <p><span>材质</span><i></i></p>
+                <ul class="clearfix">
+                    <li>201</li>
+                    <li>304</li>
+                    <li>J1</li>
+                    <li>J3</li>
+                    <li>201</li>
+                    <li>304</li>
+                    <li>J1</li>
+                    <li>J3</li>
+                    <li>201</li>
+                    <li>304</li>
+                    <li>J1</li>
+                    <li>J3</li>
+                </ul>
+            </div>
+
+            <!-- 表面 -->
+            <div class="part arrow">
+                <p><span>表面</span><i></i></p>
+                <ul class="clearfix">
+                    <li>2BQ</li>
+                    <li>2BE</li>
+                    <li>NO.1</li>
+                    <li>2BB</li>
+                    <li>2BQ</li>
+                    <li>2BE</li>
+                    <li>NO.1</li>
+                    <li>2BB</li>
+                    <li>2BQ</li>
+                    <li>2BE</li>
+                    <li>NO.1</li>
+                    <li>2BB</li>
+                </ul>
+            </div>
+
+            <!-- 宽度 -->
+            <div class="part arrow">
+                <p><span>宽度</span><i></i></p>
+                <ul class="clearfix">
+                    <li>1000</li>
+                    <li>1019</li>
+                    <li>1219</li>
+                    <li>1240</li>
+                    <li>1000</li>
+                    <li>1019</li>
+                    <li>1219</li>
+                    <li>1240</li>
+                    <li>1000</li>
+                    <li>1019</li>
+                    <li>1219</li>
+                    <li>1240</li>
+                    <li>1000</li>
+                    <li>1019</li>
+                    <li>1219</li>
+                    <li>1240</li>
+                </ul>
+            </div>
+
+            <!-- 厚度 -->
+            <div class="part arrow">
+                <p><span>厚度</span><i></i></p>
+                <ul class="clearfix">
+                    <li>0.25</li>
+                    <li>0.28</li>
+                    <li>0.3</li>
+                    <li>0.35</li>
+                    <li>0.25</li>
+                    <li>0.28</li>
+                    <li>0.3</li>
+                    <li>0.35</li>
+                    <li>0.25</li>
+                    <li>0.28</li>
+                    <li>0.3</li>
+                    <li>0.35</li>
+                </ul>
+            </div>
+
+            <!-- 边部 -->
+            <div class="part">
+                <p><span>边部</span><i></i></p>
+                <ul class="clearfix">
+                    <li>M</li>
+                    <li>C</li>
+                </ul>
+            </div>
+            <button class="submit">完成</button>
+        </div>
+
+    </div>
+</body>
+
+</html>
