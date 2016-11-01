@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link type="text/css" rel="stylesheet" href="css/maincss.css" />
+</head>
+
+<body style="background:#F5F5F5;">
+<div id="maimai">
+  <div id="header">
+    <div class="head_left">
+        筛选
+    </div><!--head_left-->
+    <div class="head_middle">
+        <div class="head_middle_list">
+            <ul>
+               <li style="border-bottom:solid 8px #FFFFFF;">卖</li>
+               <li>买</li>
+            </ul>
+        </div><!--head_middle_list-->
+    </div><!--head-->
+    <div class="head_right">
+        <img src="img/shuaxin.png" />
+    </div><!--head_right-->
+  </div><!--header-->
+  <div id="container">
+     <div class="sj_content">
+        <div class="shiji_search">
+           <center><input class="text_search" type="text" value="搜索" /><center>
+        </div><!--shiji_search-->
+        <div class="sj_list">
+           <div class="sj_list_con">
+               <div class="sj_list_img">
+                   <span></span>
+               </div><!--sj_list_img-->
+               <div class="sj_list_text">
+                   <div class="sj_list_texttitle">
+                       <div class="sj_title1">哇哈哈公司</div>
+                       <div class="sj_title2">5分钟前，更新了10条库存</div>
+                   </div><!--sj_list_texttitle-->
+                   <div class="sj_list_textdetail">
+                       <div class="sj_detail">800 - 1250 宽 BA 不锈钢最低价！</div>
+                       <div class="sj_tag">
+                           <a>卷材</a> <a>800</a> <a>BA</a> <a>低价</a> <a>低价</a>
+                       </div><!--sj_tag-->
+                   </div><!--sj_list_textdetail-->
+               </div><!--sj_list_text-->
+           </div><!--sj_list_con-->
+        </div><!--sj_list-->
+        <div class="sj_list">
+           <div class="sj_list_con">
+               <div class="sj_list_img">
+                   <span></span>
+               </div><!--sj_list_img-->
+               <div class="sj_list_text">
+                   <div class="sj_list_texttitle">
+                       <div class="sj_title1">哇哈哈公司</div>
+                       <div class="sj_title2">5分钟前，更新了10条库存</div>
+                   </div><!--sj_list_texttitle-->
+                   <div class="sj_list_textdetail">
+                       <div class="sj_detail">800 - 1250 宽 BA 不锈钢最低价！</div>
+                       <div class="sj_tag">
+                           <a>卷材</a> <a>800</a> <a>BA</a> <a>低价</a> <a>低价</a>
+                       </div><!--sj_tag-->
+                   </div><!--sj_list_textdetail-->
+               </div><!--sj_list_text-->
+           </div><!--sj_list_con-->
+        </div><!--sj_list-->
+        <div class="sj_list">
+           <div class="sj_list_con">
+               <div class="sj_list_img">
+                   <span></span>
+               </div><!--sj_list_img-->
+               <div class="sj_list_text">
+                   <div class="sj_list_texttitle">
+                       <div class="sj_title1">哇哈哈公司</div>
+                       <div class="sj_title2">5分钟前，更新了10条库存</div>
+                   </div><!--sj_list_texttitle-->
+                   <div class="sj_list_textdetail">
+                       <div class="sj_detail">800 - 1250 宽 BA 不锈钢最低价！</div>
+                       <div class="sj_tag">
+                           <a>卷材</a> <a>800</a> <a>BA</a> <a>低价</a> <a>低价</a>
+                       </div><!--sj_tag-->
+                   </div><!--sj_list_textdetail-->
+               </div><!--sj_list_text-->
+           </div><!--sj_list_con-->
+        </div><!--sj_list-->
+        <div class="sj_list">
+           <div class="sj_list_con">
+               <div class="sj_list_img">
+                   <span></span>
+               </div><!--sj_list_img-->
+               <div class="sj_list_text">
+                   <div class="sj_list_texttitle">
+                       <div class="sj_title1">哇哈哈公司</div>
+                       <div class="sj_title2">5分钟前，更新了10条库存</div>
+                   </div><!--sj_list_texttitle-->
+                   <div class="sj_list_textdetail">
+                       <div class="sj_detail">800 - 1250 宽 BA 不锈钢最低价！</div>
+                       <div class="sj_tag">
+                           <a>卷材</a> <a>800</a> <a>BA</a> <a>低价</a> <a>低价</a>
+                       </div><!--sj_tag-->
+                   </div><!--sj_list_textdetail-->
+               </div><!--sj_list_text-->
+           </div><!--sj_list_con-->
+        </div><!--sj_list-->
+        <div class="sj_more">查看更多</div>
+     </div><!--sj_content-->
+  </div><!--container-->
+  <div id="footer">
+    <div class="footbtn_1">
+         <span>
+            <img src="img/index_icon11.png" />
+            市集
+         </span>
+    </div>
+    <div class="footbtn_2">
+         <span>
+            <img src="img/index_icon2.png" />
+            信息
+         </span>
+    </div>
+    <div class="footbtn_3">
+         <span>
+            <img src="img/index_icon3.png" />
+            我的
+         </span>
+    </div>
+    
+  </div><!--footer-->
+</div>
+</body>
+</html>

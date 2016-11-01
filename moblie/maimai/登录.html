@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <title>登录</title>
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/base.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $(".p-cont-pw a").on("click",function(e){
+                e.stopPropagation();
+                var that  = $(this);
+                if(!that.is(".active")){
+                    that.addClass("active");
+                    that.siblings("input").attr("type","text");
+                }else{
+                    that.removeClass("active");
+                    that.siblings("input").attr("type","password");
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="denglu">
+        <div class="main">
+            <div class="logo">
+                <img src="img/logo.png">
+            </div>
+            <form>
+                <!-- password - list -->
+                <ul class="p-list">
+
+                    <!-- 帐号 -->
+                    <li class="p-item">
+                        <label>
+                            <div class="p-cont">
+                                <input type="text" name="" placeholder="帐号">
+                            </div>
+                        </label>
+                    </li>
+
+                    <!-- 密码 -->
+                    <li class="p-item">
+                        <label>
+                            <div class="p-cont p-cont-pw">
+                                <input type="password" name="" placeholder="密码">
+                                <!-- 密码可视 -->
+                                <a href="javascript:void(0)"></a>
+                            </div>
+                        </label>
+                    </li>
+
+                <button class="submit">登录</button>
+            </form>
+
+            <div class="h-f">
+                <p>
+                    <a href="http://www.baidu.com">帮助中心</a>
+                    <a href="http://www.baidu.com">忘记密码</a>
+                </p>
+            </div>
+
+        </div>  <!-- main -->
+
+        <!-- 底部 -->
+        <div class="footer">
+            <a href="注册.html">没有账户?请注册</a>
+        </div><!-- 底部 -->
+    </div><!-- denglu -->
+</body>
+
+</html>

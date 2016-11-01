@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <title>市集</title>
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/base.js"></script>
+    <script type="text/javascript">
+        $(function(){
+
+            /*
+             *弹出、退出筛选块操作 begin
+             */
+            function outFilter(){
+                var attr = $('.sj_content').attr("style").replace(/\s+/g,"").replace("overflow-y:hidden;","").replace("height:"+($(window).height()-3*rem)+"px;","");
+                $('.sj_content').attr("style",attr);
+                 $("#header").add(".filter").add(".btn-g").removeClass("infilter");
+            }
+
+            $(".head_left").on("click",function(){
+                $("#header").add(".filter").add(".btn-g").addClass("infilter");
+                $(document).scrollTop(0);
+                $('.sj_content').css({
+                    "overflow-y":"hidden",
+                    "height":$(window).height()-3*rem,
+                });
+            });
+            $(".sure").on("click",function(){
+                outFilter();
+            });
+            $(".cancel").on("click",function(){
+                outFilter();
+            });
+            /*
+             *弹出、退出筛选块操作 end
+             */
+
+
+
+
+
+             /*
+              * 筛选操作 begin
+              */
+
+            $(".part").each(function(item,key){
+                var that = $(key).css("height","auto");
+                that.attr("data-height",that.height());
+                that.attr("style",that.attr("style").replace(/\s+/g,"").replace("height:auto;",""));//去除css样式height
+            });
+            $(".arrow i").on("click",function(){
+                var that  = $(this);
+                var part = that.parents(".part");
+                if(part.is(".active")){
+                    part.attr("style",part.attr("style").replace(/\s+/g,"").replace("height:"+part.attr("data-height")+"px;","")).removeClass("active");//去除css样式height
+                }else{
+                    part.css("height",part.attr("data-height")).addClass("active");
+                }
+            });
+            $(".filter li").on("click",function(){
+                var that = $(this);
+                if (that.is(".active")) {
+                    that.removeClass("active");
+                }else{
+                    that.addClass("active");
+                }
+            });
+
+            /*
+             * 筛选操作 end
+             */
+
+
+
+
+             /*
+              *   滚到底部加载更多begin
+              */
+            $(document).on("scroll",function(e){
+                e.stopPropagation();
+                e.preventDefault();
+                var that = $(this);
+                var limitTop = $(".sj_more").offset().top;
+                var winHeight = $(window).height();
+                var docScrollTop = that.scrollTop();
+                // console.log(winHeight+docScrollTop-3*rem>limitTop);
+                if(winHeight+docScrollTop-3*rem>limitTop){//到底了
+
+                    for(var i =0 ; i<5 ;i++){
+                        // 模板
+                        var tpl = $(".sj_list").eq(0).clone();
+                        tpl.find(".sj_title1").html("XXX钢厂");
+                        tpl.find(".sj_title2").html("10小时前");
+                        tpl.find(".sj_detail").html("Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, facere.");
+                        tpl.find(".sj_tag").html("<span>标签1</span><span>标签2</span><span>标签3</span><span>标签4</span>");
+
+                        tpl.insertBefore(".sj_more");
+                    }
+
+                }
+            });
+
+            /*
+             *   滚到底部加载更多end
+             */
+
+
+        });
+    </script>
+</head>
+
+<body style="background:#F5F5F5;">
+    <div id="shiji">
+        <div id="header" class="clearfix">
+            <!-- 筛选 -->
+            <a href="javascript:void(0)" class="head_left">筛选<i></i></a>
+            <!-- 刷新 -->
+            <a href="javascript:void(0)" class="head_right"></a>
+
+            <div class="head_middle">
+                <a class="active" href="javascript:void(0)">卖</a>
+                <a href="javascript:void(0)">买</a>
+            </div><!-- head_middle -->
+
+        </div><!--header-->
+
+        <div class="main">
+            <div class="sj_content">
+                <a  class="shiji_search" href="javascript:void(0)">
+                    <span>搜索</span>
+                </a><!--shiji_search-->
+
+
+                <!-- sj_list -->
+                <div class="sj_list">
+                    <div class="sj_list_con clearfix">
+                        <div class="sj_list_img">
+                            <i style="background-image: url(img/someone.png)"></i>
+                        </div><!--sj_list_img-->
+                        <div class="sj_list_text">
+                            <div class="sj_list_texttitle clearfix">
+                                <div class="sj_title1">哇哈哈公司</div>
+                                <div class="sj_title2">5分钟前</div>
+                            </div><!--sj_list_texttitle-->
+                            <div class="sj_list_textdetail">
+                                <div class="sj_detail">800 - 1250 宽 BA 不锈钢最低价！</div>
+                                <div class="sj_tag">
+                                    <span>卷材</span> <span>800</span> <span>BA</span> <span>低价</span>
+                                </div><!--sj_tag-->
+                            </div><!--sj_list_textdetail-->
+                        </div><!--sj_list_text-->
+                    </div><!--sj_list_con-->
+                </div><!--sj_list-->
+
+                <!-- sj_list -->
+                <div class="sj_list">
+                    <div class="sj_list_con clearfix">
+                        <div class="sj_list_img">
+                            <i style="background-image: url(img/someone.png)"></i>
+                        </div><!--sj_list_img-->
+                        <div class="sj_list_text">
+                            <div class="sj_list_texttitle clearfix">
+                                <div class="sj_title1">哇哈哈公司</div>
+                                <div class="sj_title2">5分钟前</div>
+                            </div><!--sj_list_texttitle-->
+                            <div class="sj_list_textdetail">
+                                <div class="sj_detail">800 - 1250 宽 BA 不锈钢最低价！</div>
+                                <div class="sj_tag">
+                                    <span>卷材</span> <span>800</span> <span>BA</span> <span>低价</span>
+                                </div><!--sj_tag-->
+                            </div><!--sj_list_textdetail-->
+                        </div><!--sj_list_text-->
+                    </div><!--sj_list_con-->
+                </div><!--sj_list-->
+
+                <!-- sj_list -->
+                <div class="sj_list">
+                    <div class="sj_list_con clearfix">
+                        <div class="sj_list_img">
+                            <i style="background-image: url(img/someone.png)"></i>
+                        </div><!--sj_list_img-->
+                        <div class="sj_list_text">
+                            <div class="sj_list_texttitle clearfix">
+                                <div class="sj_title1">哇哈哈公司</div>
+                                <div class="sj_title2">5分钟前</div>
+                            </div><!--sj_list_texttitle-->
+                            <div class="sj_list_textdetail">
+                                <div class="sj_detail">800 - 1250 宽 BA 不锈钢最低价！</div>
+                                <div class="sj_tag">
+                                    <span>卷材</span> <span>800</span> <span>BA</span> <span>低价</span>
+                                </div><!--sj_tag-->
+                            </div><!--sj_list_textdetail-->
+                        </div><!--sj_list_text-->
+                    </div><!--sj_list_con-->
+                </div><!--sj_list-->
+
+                <!-- sj_list -->
+                <div class="sj_list">
+                    <div class="sj_list_con clearfix">
+                        <div class="sj_list_img">
+                            <i style="background-image: url(img/someone.png)"></i>
+                        </div><!--sj_list_img-->
+                        <div class="sj_list_text">
+                            <div class="sj_list_texttitle clearfix">
+                                <div class="sj_title1">哇哈哈公司</div>
+                                <div class="sj_title2">5分钟前</div>
+                            </div><!--sj_list_texttitle-->
+                            <div class="sj_list_textdetail">
+                                <div class="sj_detail">800 - 1250 宽 BA 不锈钢最低价！</div>
+                                <div class="sj_tag">
+                                    <span>卷材</span> <span>800</span> <span>BA</span> <span>低价</span>
+                                </div><!--sj_tag-->
+                            </div><!--sj_list_textdetail-->
+                        </div><!--sj_list_text-->
+                    </div><!--sj_list_con-->
+                </div><!--sj_list-->
+
+
+                <!-- sj_list -->
+                <div class="sj_list">
+                    <div class="sj_list_con clearfix">
+                        <div class="sj_list_img">
+                            <i style="background-image: url(img/someone.png)"></i>
+                        </div><!--sj_list_img-->
+                        <div class="sj_list_text">
+                            <div class="sj_list_texttitle clearfix">
+                                <div class="sj_title1">哇哈哈公司</div>
+                                <div class="sj_title2">5分钟前</div>
+                            </div><!--sj_list_texttitle-->
+                            <div class="sj_list_textdetail">
+                                <div class="sj_detail">800 - 1250 宽 BA 不锈钢最低价！</div>
+                                <div class="sj_tag">
+                                    <span>卷材</span> <span>800</span> <span>BA</span> <span>低价</span>
+                                </div><!--sj_tag-->
+                            </div><!--sj_list_textdetail-->
+                        </div><!--sj_list_text-->
+                    </div><!--sj_list_con-->
+                </div><!--sj_list-->
+
+
+                <!-- sj_list -->
+                <div class="sj_list">
+                    <div class="sj_list_con clearfix">
+                        <div class="sj_list_img">
+                            <i style="background-image: url(img/someone.png)"></i>
+                        </div><!--sj_list_img-->
+                        <div class="sj_list_text">
+                            <div class="sj_list_texttitle clearfix">
+                                <div class="sj_title1">哇哈哈公司</div>
+                                <div class="sj_title2">5分钟前</div>
+                            </div><!--sj_list_texttitle-->
+                            <div class="sj_list_textdetail">
+                                <div class="sj_detail">800 - 1250 宽 BA 不锈钢最低价！</div>
+                                <div class="sj_tag">
+                                    <span>卷材</span> <span>800</span> <span>BA</span> <span>低价</span>
+                                </div><!--sj_tag-->
+                            </div><!--sj_list_textdetail-->
+                        </div><!--sj_list_text-->
+                    </div><!--sj_list_con-->
+                </div><!--sj_list-->
+
+
+                <!-- sj_list -->
+                <div class="sj_list">
+                    <div class="sj_list_con clearfix">
+                        <div class="sj_list_img">
+                            <i style="background-image: url(img/someone.png)"></i>
+                        </div><!--sj_list_img-->
+                        <div class="sj_list_text">
+                            <div class="sj_list_texttitle clearfix">
+                                <div class="sj_title1">哇哈哈公司</div>
+                                <div class="sj_title2">5分钟前</div>
+                            </div><!--sj_list_texttitle-->
+                            <div class="sj_list_textdetail">
+                                <div class="sj_detail">800 - 1250 宽 BA 不锈钢最低价！</div>
+                                <div class="sj_tag">
+                                    <span>卷材</span> <span>800</span> <span>BA</span> <span>低价</span>
+                                </div><!--sj_tag-->
+                            </div><!--sj_list_textdetail-->
+                        </div><!--sj_list_text-->
+                    </div><!--sj_list_con-->
+                </div><!--sj_list-->
+
+
+                <!-- sj_list -->
+                <div class="sj_list">
+                    <div class="sj_list_con clearfix">
+                        <div class="sj_list_img">
+                            <i style="background-image: url(img/someone.png)"></i>
+                        </div><!--sj_list_img-->
+                        <div class="sj_list_text">
+                            <div class="sj_list_texttitle clearfix">
+                                <div class="sj_title1">哇哈哈公司</div>
+                                <div class="sj_title2">5分钟前</div>
+                            </div><!--sj_list_texttitle-->
+                            <div class="sj_list_textdetail">
+                                <div class="sj_detail">800 - 1250 宽 BA 不锈钢最低价！</div>
+                                <div class="sj_tag">
+                                    <span>卷材</span> <span>800</span> <span>BA</span> <span>低价</span>
+                                </div><!--sj_tag-->
+                            </div><!--sj_list_textdetail-->
+                        </div><!--sj_list_text-->
+                    </div><!--sj_list_con-->
+                </div><!--sj_list-->
+
+
+                <!-- sj_list -->
+                <div class="sj_list">
+                    <div class="sj_list_con clearfix">
+                        <div class="sj_list_img">
+                            <i style="background-image: url(img/someone.png)"></i>
+                        </div><!--sj_list_img-->
+                        <div class="sj_list_text">
+                            <div class="sj_list_texttitle clearfix">
+                                <div class="sj_title1">哇哈哈公司</div>
+                                <div class="sj_title2">5分钟前</div>
+                            </div><!--sj_list_texttitle-->
+                            <div class="sj_list_textdetail">
+                                <div class="sj_detail">800 - 1250 宽 BA 不锈钢最低价！</div>
+                                <div class="sj_tag">
+                                    <span>卷材</span> <span>800</span> <span>BA</span> <span>低价</span>
+                                </div><!--sj_tag-->
+                            </div><!--sj_list_textdetail-->
+                        </div><!--sj_list_text-->
+                    </div><!--sj_list_con-->
+                </div><!--sj_list-->
+
+
+                <!-- sj_list -->
+                <div class="sj_list">
+                    <div class="sj_list_con clearfix">
+                        <div class="sj_list_img">
+                            <i style="background-image: url(img/someone.png)"></i>
+                        </div><!--sj_list_img-->
+                        <div class="sj_list_text">
+                            <div class="sj_list_texttitle clearfix">
+                                <div class="sj_title1">哇哈哈公司</div>
+                                <div class="sj_title2">5分钟前</div>
+                            </div><!--sj_list_texttitle-->
+                            <div class="sj_list_textdetail">
+                                <div class="sj_detail">800 - 1250 宽 BA 不锈钢最低价！</div>
+                                <div class="sj_tag">
+                                    <span>卷材</span> <span>800</span> <span>BA</span> <span>低价</span>
+                                </div><!--sj_tag-->
+                            </div><!--sj_list_textdetail-->
+                        </div><!--sj_list_text-->
+                    </div><!--sj_list_con-->
+                </div><!--sj_list-->
+
+                <a href="javascript:void(0)" class="sj_more">查看更多</a>
+            </div><!--sj_content-->
+
+            <!-- 筛选 -->
+            <div class="filter">
+                <!-- 品名 -->
+                <div class="part part1">
+                    <p><span>品名</span><i></i></p>
+                    <ul class="clearfix">
+                        <li>热轧卷材</li>
+                        <li>冷轧卷材</li>
+                    </ul>
+                </div><!-- 品名 -->
+
+                <!-- 品牌 -->
+                <div class="part">
+                    <p><span>品牌</span><i></i></p>
+                    <ul class="clearfix">
+                        <li>山东宏旺</li>
+                        <li>宏旺</li>
+                        <li>联众</li>
+                    </ul>
+                </div><!-- 品牌 -->
+
+                <!-- 材质 -->
+                <div class="part arrow">
+                    <p><span>材质</span><i></i></p>
+                    <ul class="clearfix">
+                        <li>201</li>
+                        <li>304</li>
+                        <li>J1</li>
+                        <li>J3</li>
+                        <li>201</li>
+                        <li>304</li>
+                        <li>J1</li>
+                        <li>J3</li>
+                        <li>201</li>
+                        <li>304</li>
+                        <li>J1</li>
+                        <li>J3</li>
+                    </ul>
+                </div><!-- 材质 -->
+
+                <!-- 表面 -->
+                <div class="part arrow">
+                    <p><span>表面</span><i></i></p>
+                    <ul class="clearfix">
+                        <li>2BQ</li>
+                        <li>2BE</li>
+                        <li>NO.1</li>
+                        <li>2BB</li>
+                        <li>2BQ</li>
+                        <li>2BE</li>
+                        <li>NO.1</li>
+                        <li>2BB</li>
+                        <li>2BQ</li>
+                        <li>2BE</li>
+                        <li>NO.1</li>
+                        <li>2BB</li>
+                    </ul>
+                </div><!-- 表面 -->
+
+                <!-- 宽度 -->
+                <div class="part arrow">
+                    <p><span>宽度</span><i></i></p>
+                    <ul class="clearfix">
+                        <li>1000</li>
+                        <li>1019</li>
+                        <li>1219</li>
+                        <li>1240</li>
+                        <li>1000</li>
+                        <li>1019</li>
+                        <li>1219</li>
+                        <li>1240</li>
+                        <li>1000</li>
+                        <li>1019</li>
+                        <li>1219</li>
+                        <li>1240</li>
+                        <li>1000</li>
+                        <li>1019</li>
+                        <li>1219</li>
+                        <li>1240</li>
+                    </ul>
+                </div><!-- 宽度 -->
+
+                <!-- 厚度 -->
+                <div class="part arrow">
+                    <p><span>厚度</span><i></i></p>
+                    <ul class="clearfix">
+                        <li>0.25</li>
+                        <li>0.28</li>
+                        <li>0.3</li>
+                        <li>0.35</li>
+                        <li>0.25</li>
+                        <li>0.28</li>
+                        <li>0.3</li>
+                        <li>0.35</li>
+                        <li>0.25</li>
+                        <li>0.28</li>
+                        <li>0.3</li>
+                        <li>0.35</li>
+                    </ul>
+                </div> <!-- 厚度 -->
+
+                <!-- 边部 -->
+                <div class="part">
+                    <p><span>边部</span><i></i></p>
+                    <ul class="clearfix">
+                        <li>M</li>
+                        <li>C</li>
+                    </ul>
+                </div><!-- 边部 -->
+            </div><!-- 筛选 -->
+            <div class="btn-g">
+                <button class="cancel">取消</button>
+                <button class="sure">确定</button>
+            </div>
+        </div><!-- main -->
+
+
+
+        <div id="commonFooter">
+            <a href="javascript:void(0)" class="footbtn footbtn1 active">市集<span class="num">99</span></a>
+            <a href="javascript:void(0)" class="footbtn footbtn2">信息<span class="num">99</span></a>
+            <a href="我的.html" class="footbtn footbtn3">我的<span class="num">99</span></a>
+        </div><!--commonFooter-->
+
+    </div>
+</body>
+
+</html>
