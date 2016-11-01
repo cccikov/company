@@ -1,0 +1,113 @@
+/* 登陆页 */
+#login {
+  position: relative;
+  height: 100%;
+  min-width: 1024px;
+  width: 100%;
+  text-align: center;
+  font-family: "微软雅黑";
+  font-size: 12px;
+  color: #fff;
+}
+#login .middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -125px 0 0 -150px;
+}
+#login .middle .m-img {
+  position: absolute;
+  top: -86px;
+  left: 0;
+  width: 100%;
+}
+#login .middle p {
+  margin: 15px 0;
+  font-size: 16px;
+}
+#login .middle p ::-moz-placeholder {
+  color: #fff;
+  font-size: 16px;
+}
+#login .middle p ::-webkit-input-placeholder {
+  color: #fff;
+  font-size: 16px;
+}
+#login .middle p :-ms-input-placeholder {
+  color: #fff;
+  font-size: 16px;
+}
+#login .middle p input {
+  box-sizing: border-box;
+  height: 45px;
+  width: 300px;
+  padding: 0 15px;
+  border: none;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.35);
+  color: #fff;
+  letter-spacing: 1px;
+  word-spacing: 1px;
+  font-size: 16px;
+}
+#login .middle p input:focus {
+  outline: none;
+}
+#login .middle p button {
+  box-sizing: border-box;
+  height: 45px;
+  width: 300px;
+  border: none;
+  border-radius: 5px;
+  background: #42a5f5;
+  color: #fff;
+  font-size: 16px;
+}
+#login .middle .m-pw {
+  position: relative;
+}
+#login .middle .m-pw input {
+  padding: 0 55px 0 15px;
+}
+#login .middle .m-pw i {
+  position: absolute;
+  top: 11px;
+  right: 15px;
+  width: 22px;
+  height: 22px;
+  background: url(../img/visibility_off.png) center no-repeat;
+  cursor: pointer;
+}
+#login .middle .m-pw i.active {
+  background: url(../img/visibility.png) center no-repeat;
+}
+#login .middle .m-a {
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  width: 100%;
+}
+#login .middle .m-a a {
+  display: inline-block;
+  padding: 0 10px;
+  border-right: 1px solid #fff;
+}
+#login .footer {
+  position: absolute;
+  bottom: 8px;
+  left: 0;
+  width: 100%;
+}
+#login .footer .footer-line1 {
+  width: 320px;
+  margin: 0 auto 15px;
+}
+#login .footer .footer-line1 a {
+  box-sizing: border-box;
+  float: left;
+  width: 20%;
+  border-left: 1px solid #fff;
+}
+#login .no-border {
+  border: none !important;
+}

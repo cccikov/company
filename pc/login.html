@@ -2,9 +2,68 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>登录</title>
+    <title>登陆</title>
+    <style type="text/css">
+        html,body{
+            height:100%;
+            background: url(img/background.png) center no-repeat;
+            background-size: 1080;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/base.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $(".visi").on("click",function(e){
+                var that = $(this);
+                var input = that.siblings("input");
+                if(!that.is(".active")){
+                    that.addClass("active");
+                    input.attr("type","text");
+                }else{
+                    that.removeClass("active");
+                    input.attr("type","password");
+                }
+            });
+        });
+    </script>
 </head>
 <body>
+    <!-- 登陆页 -->
+    <div id="login">
+        <div class="middle">
+            <div class="m-img">
+                 <img src="img/logo.png" alt="logo">
+            </div>
+            <p>
+                <input type="text" name="" placeholder="账户">
+            </p>
+            <p class="m-pw">
+                <input type="password" name="" placeholder="密码">
+                <i class="visi"></i>
+            </p>
+            <p>
+                <button>登陆</button>
+            </p>
+            <div class="m-a">
+                <a href="javascript:void(0)">帮助中心</a>
+                <a class="no-border" href="javascript:void(0)">忘记密码</a>
+            </div>
+        </div><!-- middle -->
 
+        <div class="footer">
+            <p class="footer-line1 clearfix">
+                <a class="no-border" href="javascript:void(0)">交易规则</a>
+                <a href="javascript:void(0)">免责声明</a>
+                <a href="javascript:void(0)">隐私条款</a>
+                <a href="javascript:void(0)">关于我们</a>
+                <a href="javascript:void(0)">联系我们</a>
+            </p>
+            <p class="footer-line2">Copyright © 2014-2016 粤ICP 备 15109338 号 拓港信息技术有限公司 版权所有</p>
+        </div><!-- footer -->
+
+    </div><!-- login -->
 </body>
 </html>
