@@ -4,34 +4,214 @@
 <head>
     <meta charset="UTF-8">
     <title>加报价</title>
+    <style type="text/css">
+        html,
+        body {
+            background: #FAFAFA;
+        }
+    </style>
     <link rel="stylesheet" type="text/css" href="css/common.css">
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/base.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            var hasSelect = 0;//用来标记有多少个选项被选上了
+
+            /*选择 操作begin*/
+            $(".select").on("click", function() {
+                var that = $(this);
+                var height = that[0].scrollHeight
+                if (that.hasClass("active")) {
+                    that.removeClass("active").height(28);
+                } else {
+                    that.addClass("active").height(height).parent().siblings().find(".select").removeClass("active").height(28);;
+                }
+            });
+
+            $(".option").on("click", function(e) {
+                e.stopPropagation();
+                var that = $(this);
+                var parent = that.parent();
+                var defaultObj = that.siblings(".option-default");
+
+                defaultObj.html(that.html())
+                parent.removeClass("active").addClass("selected").height(28);
+
+                hasSelect += 1;
+                console.log(hasSelect);
+                //全部选好,可以发布
+                if (hasSelect == 10 && $(".input").val().trim() != "") {
+                    $(".submit").addClass("canSubmit");
+                }
+            });
+            /*选择 操作end*/
+
+            /*输入价格操作 begin*/
+            $(".input").on("focus", function() {
+                var that = $(this);
+                var iEle = that.siblings("i");
+                iEle.addClass("focus");
+            }).on("blur", function() {
+                var that = $(this);
+                var iEle = that.siblings("i");
+                if (that.val().trim() != "") {
+                    that.addClass("focus");
+                } else {
+                    that.add(iEle).removeClass("focus");
+                }
+            }).on('input propertychange', function() {
+                var that = $(this);
+                var iEle = that.siblings("i");
+
+                if (hasSelect == 10 && $(".input").val().trim() != "") {
+                    $(".submit").addClass("canSubmit");
+                } else {
+                    $(".submit").removeClass("canSubmit");
+                }
+            });
+            /*输入价格操作 end*/
+
+            /*发布按钮*/
+            $(".submit").on("click", function() {
+                var that = $(this);
+                if (that.is(".canSubmit")) {
+                    alert("submit");
+                } else {
+                    return;
+                }
+            });
+        });
+    </script>
 </head>
 
 <body>
     <!-- 主页 -->
     <div id="index">
-
         <!-- 上部 -->
-        <div class="top">
+        <div class="top clearfix">
             <div class="left">
                 <img src="img/default.jpg">
                 <strong>哈哈哈公司</strong>
                 <span>共 50 条报价</span>
                 <a href="javascript:void(0)">退出</a>
-            </div><!-- left -->
-            <div class="right"></div>
-        </div><!-- top -->
-
+            </div>
+            <!-- left -->
+            <ul class="right">
+                <!-- 品牌 -->
+                <li class="right-item">
+                    <span>品牌</span>
+                    <ul class="select" data-name="品牌">
+                        <li class="option-default">选择</li>
+                        <li class="option" data-value="山东宏旺1">山东宏旺1</li>
+                        <li class="option" data-value="山东宏旺2">山东宏旺2</li>
+                        <li class="option" data-value="山东宏旺3">山东宏旺3</li>
+                        <li class="option" data-value="山东宏旺4">山东宏旺4</li>
+                        <li class="option" data-value="山东宏旺5">山东宏旺5</li>
+                        <li class="option" data-value="山东宏旺6">山东宏旺6</li>
+                        <li class="option" data-value="山东宏旺7">山东宏旺7</li>
+                    </ul>
+                </li>
+                <!-- 品名 -->
+                <li class="right-item">
+                    <span>品名</span>
+                    <ul class="select" data-name="品名">
+                        <li class="option-default">选择</li>
+                        <li class="option" data-value="冷轧卷材">冷轧卷材</li>
+                        <li class="option" data-value="热轧卷材">热轧卷材</li>
+                        <li class="option" data-value="冷轧板材">冷轧板材</li>
+                        <li class="option" data-value="热轧板材">热轧板材</li>
+                    </ul>
+                </li>
+                <!-- 材质 -->
+                <li class="right-item">
+                    <span>材质</span>
+                    <ul class="select" data-name="材质">
+                        <li class="option-default">选择</li>
+                        <li class="option" data-value="304">304</li>
+                        <li class="option" data-value="305">305</li>
+                    </ul>
+                </li>
+                <!-- 表面 -->
+                <li class="right-item">
+                    <span>表面</span>
+                    <ul class="select" data-name="表面">
+                        <li class="option-default">选择</li>
+                        <li class="option" data-value="2B">2B</li>
+                        <li class="option" data-value="3B">3B</li>
+                    </ul>
+                </li>
+                <!-- 厚度 -->
+                <li class="right-item">
+                    <span>厚度</span>
+                    <ul class="select" data-name="厚度">
+                        <li class="option-default">选择</li>
+                        <li class="option" data-value="0.40">0.40</li>
+                        <li class="option" data-value="0.38">0.38</li>
+                    </ul>
+                </li>
+                <!-- 宽度 -->
+                <li class="right-item">
+                    <span>宽度</span>
+                    <ul class="select" data-name="宽度">
+                        <li class="option-default">选择</li>
+                        <li class="option" data-value="1219">1219</li>
+                        <li class="option" data-value="1240">1240</li>
+                    </ul>
+                </li>
+                <!-- 边部 -->
+                <li class="right-item">
+                    <span>边部</span>
+                    <ul class="select" data-name="边部">
+                        <li class="option-default">选择</li>
+                        <li class="option" data-value="M">M</li>
+                        <li class="option" data-value="C">C</li>
+                    </ul>
+                </li>
+                <!-- 标准 -->
+                <li class="right-item">
+                    <span>标准</span>
+                    <ul class="select" data-name="标准">
+                        <li class="option-default">选择</li>
+                        <li class="option" data-value="GB">GB</li>
+                        <li class="option" data-value="JIS">JIS</li>
+                    </ul>
+                </li>
+                <!-- 地区 -->
+                <li class="right-item">
+                    <span>地区</span>
+                    <ul class="select" data-name="地区">
+                        <li class="option-default">选择</li>
+                        <li class="option" data-value="华南">华南</li>
+                        <li class="option" data-value="华北">华北</li>
+                    </ul>
+                </li>
+                <!-- 级别 -->
+                <li class="right-item">
+                    <span>级别</span>
+                    <ul class="select" data-name="级别">
+                        <li class="option-default">选择</li>
+                        <li class="option" data-value="一级">一级</li>
+                        <li class="option" data-value="二级">二级</li>
+                        <li class="option" data-value="三级">三级</li>
+                    </ul>
+                </li>
+                <li class="right-item">
+                    <input class="input" type="tel" name="">
+                    <i>元/吨</i>
+                </li>
+                <li class="right-item">
+                    <a class="submit">发布</a>
+                </li>
+            </ul>
+        </div>
+        <!-- top -->
         <!-- 主要 -->
         <div class="main">
-
-        </div><!-- main -->
-
-    </div><!-- index -->
-
+        </div>
+        <!-- main -->
+    </div>
+    <!-- index -->
 </body>
 
 </html>

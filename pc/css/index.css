@@ -111,3 +111,175 @@
 #login .no-border {
   border: none !important;
 }
+/* 主页 */
+#index {
+  padding: 15px 0;
+  font-family: "微软雅黑";
+}
+#index .top {
+  width: 1200px;
+  margin: 0 auto;
+}
+#index .top .left {
+  float: left;
+  width: 150px;
+  line-height: 1em;
+  min-height: 150px;
+  border-radius: 5px;
+  text-align: center;
+  background: #fff;
+}
+#index .top .left img {
+  width: 60px;
+  height: 60px;
+  border-radius: 5px;
+  margin: 10px 0 0;
+}
+#index .top .left strong {
+  display: block;
+  line-height: 1em;
+  margin: 9px 0 0;
+  font-size: 14px;
+  font-weight: 300;
+  color: #616161;
+}
+#index .top .left span {
+  display: block;
+  margin: 12px 0 0;
+  color: #ffa726;
+}
+#index .top .left a {
+  display: block;
+  margin: 12px 0 0;
+  color: #bdbdbd;
+}
+#index .top .right {
+  float: right;
+  width: 978px;
+  height: 120px;
+  padding: 30px 16px 0 41px;
+  border-radius: 5px;
+  background: #fff;
+}
+#index .top .right .right-item {
+  float: left;
+  position: relative;
+  width: 138px;
+  margin: 0 25px 30px 0;
+}
+#index .top .right .right-item span {
+  float: left;
+  line-height: 30px;
+  margin: 0 10px 0 0;
+  color: #9e9e9e;
+  font-size: 14px;
+}
+#index .top .right .right-item .select {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  box-sizing: border-box;
+  float: left;
+  width: 100px;
+  height: 30px;
+  line-height: 30px;
+  border: 1px solid #e0e0e0;
+  border-radius: 15px;
+  overflow: hidden;
+  font-size: 14px;
+  color: #757575;
+  text-align: center;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  transition: height 0.18s;
+  background: #fff;
+}
+#index .top .right .right-item .select .option-default {
+  color: #9e9e9e;
+}
+#index .top .right .right-item .select .option {
+  color: #757575;
+}
+#index .top .right .right-item .select .option:before {
+  content: "";
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+  border-top: 1px solid #e0e0e0;
+}
+#index .top .right .right-item .select .option:hover {
+  background: #f9f9f9;
+}
+#index .top .right .right-item .select .option:active {
+  background: #e0e0e0;
+}
+#index .top .right .right-item .select.selected {
+  border-color: #ffa726;
+}
+#index .top .right .right-item .select.selected .option-default {
+  color: #ffa726;
+}
+#index .top .right .right-item .select.active {
+  z-index: 10;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2), -1px 1px 2px rgba(0, 0, 0, 0.2);
+  border-color: #e0e0e0;
+}
+#index .top .right .right-item .select.active .option-default {
+  color: #e0e0e0;
+}
+#index .top .right .right-item input {
+  width: 76px;
+  line-height: 30px;
+  padding: 0 50px 0 12px;
+  border: none;
+  border-bottom: 1px solid #e0e0e0;
+}
+#index .top .right .right-item input:focus {
+  outline: none;
+  border-bottom: 1px solid #ffa726;
+  color: #ffa726;
+}
+#index .top .right .right-item input.focus {
+  border-bottom: 1px solid #ffa726;
+  color: #ffa726;
+}
+#index .top .right .right-item i {
+  position: absolute;
+  top: 5px;
+  right: 12px;
+  font-size: 14px;
+  color: #9e9e9e;
+}
+#index .top .right .right-item i.focus {
+  color: #ffa726;
+}
+#index .top .right .right-item a {
+  box-sizing: border-box;
+  display: block;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 15px;
+  background: #e0e0e0;
+  color: #fff;
+}
+#index .top .right .right-item a:before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin: -2px 5px 0 -5px;
+  vertical-align: middle;
+  background: url(../img/no.png) center no-repeat;
+}
+#index .top .right .right-item a.canSubmit {
+  cursor: pointer;
+  background: #ffa726;
+}
+#index .top .right .right-item a.canSubmit:before {
+  background: url(../img/done.png) center no-repeat;
+}
