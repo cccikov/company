@@ -335,3 +335,6 @@
   border-bottom-right-radius: 15px;
   background: #fff;
 }
+#index #temple {
+  display: none;
+}

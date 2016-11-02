@@ -72,7 +72,7 @@
             });
             /*输入价格操作 end*/
 
-            /*发布按钮*/
+            /*发布按钮 begin*/
             $(".submit").on("click", function() {
                 var that = $(this);
                 if (that.is(".canSubmit")) {
@@ -81,6 +81,10 @@
                     return;
                 }
             });
+            /*发布按钮 end*/
+
+
+
         });
     </script>
 </head>
@@ -101,7 +105,7 @@
                 <!-- 品牌 -->
                 <li class="right-item">
                     <span>品牌</span>
-                    <ul class="select" data-name="品牌">
+                    <ul class="select" data-name="pinpai">
                         <li class="option-default">选择</li>
                         <li class="option" data-value="山东宏旺1">山东宏旺1</li>
                         <li class="option" data-value="山东宏旺2">山东宏旺2</li>
@@ -115,7 +119,7 @@
                 <!-- 品名 -->
                 <li class="right-item">
                     <span>品名</span>
-                    <ul class="select" data-name="品名">
+                    <ul class="select" data-name="pinming">
                         <li class="option-default">选择</li>
                         <li class="option" data-value="冷轧卷材">冷轧卷材</li>
                         <li class="option" data-value="热轧卷材">热轧卷材</li>
@@ -126,7 +130,7 @@
                 <!-- 材质 -->
                 <li class="right-item">
                     <span>材质</span>
-                    <ul class="select" data-name="材质">
+                    <ul class="select" data-name="caizhi">
                         <li class="option-default">选择</li>
                         <li class="option" data-value="304">304</li>
                         <li class="option" data-value="305">305</li>
@@ -135,7 +139,7 @@
                 <!-- 表面 -->
                 <li class="right-item">
                     <span>表面</span>
-                    <ul class="select" data-name="表面">
+                    <ul class="select" data-name="biaomian">
                         <li class="option-default">选择</li>
                         <li class="option" data-value="2B">2B</li>
                         <li class="option" data-value="3B">3B</li>
@@ -144,7 +148,7 @@
                 <!-- 厚度 -->
                 <li class="right-item">
                     <span>厚度</span>
-                    <ul class="select" data-name="厚度">
+                    <ul class="select" data-name="houdu">
                         <li class="option-default">选择</li>
                         <li class="option" data-value="0.40">0.40</li>
                         <li class="option" data-value="0.38">0.38</li>
@@ -153,7 +157,7 @@
                 <!-- 宽度 -->
                 <li class="right-item">
                     <span>宽度</span>
-                    <ul class="select" data-name="宽度">
+                    <ul class="select" data-name="kuandu">
                         <li class="option-default">选择</li>
                         <li class="option" data-value="1219">1219</li>
                         <li class="option" data-value="1240">1240</li>
@@ -162,7 +166,7 @@
                 <!-- 边部 -->
                 <li class="right-item">
                     <span>边部</span>
-                    <ul class="select" data-name="边部">
+                    <ul class="select" data-name="bianbu">
                         <li class="option-default">选择</li>
                         <li class="option" data-value="M">M</li>
                         <li class="option" data-value="C">C</li>
@@ -171,7 +175,7 @@
                 <!-- 标准 -->
                 <li class="right-item">
                     <span>标准</span>
-                    <ul class="select" data-name="标准">
+                    <ul class="select" data-name="biaozhun">
                         <li class="option-default">选择</li>
                         <li class="option" data-value="GB">GB</li>
                         <li class="option" data-value="JIS">JIS</li>
@@ -180,7 +184,7 @@
                 <!-- 地区 -->
                 <li class="right-item">
                     <span>地区</span>
-                    <ul class="select" data-name="地区">
+                    <ul class="select" data-name="diqu">
                         <li class="option-default">选择</li>
                         <li class="option" data-value="华南">华南</li>
                         <li class="option" data-value="华北">华北</li>
@@ -189,7 +193,7 @@
                 <!-- 级别 -->
                 <li class="right-item">
                     <span>级别</span>
-                    <ul class="select" data-name="级别">
+                    <ul class="select" data-name="jibie">
                         <li class="option-default">选择</li>
                         <li class="option" data-value="一级">一级</li>
                         <li class="option" data-value="二级">二级</li>
@@ -197,7 +201,7 @@
                     </ul>
                 </li>
                 <li class="right-item">
-                    <input class="input" type="tel" name="">
+                    <input class="input" type="tel" name="price">
                     <i>元/吨</i>
                 </li>
                 <li class="right-item">
@@ -284,6 +288,23 @@
             </ul>
         </div>
         <!-- main -->
+
+        <!-- 模板 -->
+        <div id="temple">
+            <li id="tpl1" class="content-item">
+                <span class="span1">山东宏旺</span>
+                <span class="span2">冷轧板材</span>
+                <span class="span3">304/2B</span>
+                <span class="span4">0.81*1500*C</span>
+                <span class="span5">M</span>
+                <span class="span6">GB</span>
+                <span class="span7">华南</span>
+                <span class="span8">一级</span>
+                <span class="span9">12,000.00(元/吨)</span>
+                <span class="span10">12:34</span>
+                <span class="span11">删除</span>
+            </li>
+        </div>
 
     </div>
     <!-- index -->
