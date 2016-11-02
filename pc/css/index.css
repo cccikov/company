@@ -283,3 +283,55 @@
 #index .top .right .right-item a.canSubmit:before {
   background: url(../img/done.png) center no-repeat;
 }
+#index .main {
+  width: 1200px;
+  margin: 15px auto 0;
+  font-size: 14px;
+}
+#index .main .title {
+  line-height: 35px;
+  padding: 0 1px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background: #ffa726;
+  color: #fff;
+}
+#index .main .title span {
+  float: left;
+  width: 9.090909090%;
+  text-align: center;
+}
+#index .main .content .content-item {
+  line-height: 44px;
+  border-left: 1px solid #e0e0e0;
+  border-right: 1px solid #e0e0e0;
+  background: #fff;
+}
+#index .main .content .content-item:after {
+  content: "";
+  display: block;
+  width: 98%;
+  margin: 0 auto;
+  border-bottom: 1px solid #e0e0e0;
+  height: 0;
+  clear: both;
+}
+#index .main .content .content-item span {
+  float: left;
+  width: 9.090909090%;
+  text-align: center;
+  color: #616161;
+}
+#index .main .content .content-item .span11 {
+  color: #ef5350;
+}
+#index .main .content .last-item {
+  line-height: 44px;
+  height: 44px;
+  border-left: 1px solid #e0e0e0;
+  border-right: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background: #fff;
+}
