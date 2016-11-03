@@ -91,7 +91,7 @@
 
                     data[name]=value;
                 });
-                data["price"]= $(".input").val();
+                data["price"]= fixNum($(".input").val());
                 data["time"] = new Date().getTime();
 
                console.log(data);
