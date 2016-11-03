@@ -77,13 +77,25 @@
                 var that = $(this);
                 if (that.is(".canSubmit")) {
                     alert("submit");
+                    submit();
                 } else {
                     return;
                 }
             });
             /*发布按钮 end*/
 
+            function submit(){
+                var data = {};
+                $(".select").each(function(item,key){
+                    var name = $(key).attr("data-name");
+                    var value = $(key).attr("data-value");
 
+                    data[name]=value;
+                });
+                data["price"]=$(".input").val();
+
+                console.log(data);
+            }
 
         });
     </script>
