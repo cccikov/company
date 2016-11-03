@@ -36,10 +36,9 @@
                 var defaultObj = that.siblings(".option-default");
 
                 defaultObj.html(that.html())
-                parent.removeClass("active").addClass("selected").height(28);
+                parent.removeClass("active").addClass("selected").height(28).attr("data-value",that.attr("data-value"));
 
                 hasSelect += 1;
-                console.log(hasSelect);
                 //全部选好,可以发布
                 if (hasSelect == 10 && $(".input").val().trim() != "") {
                     $(".submit").addClass("canSubmit");
@@ -92,9 +91,28 @@
 
                     data[name]=value;
                 });
-                data["price"]=$(".input").val();
+                data["price"]= $(".input").val();
+                data["time"] = new Date().getTime();
 
-                console.log(data);
+               console.log(data);
+               $(' <li class="content-item">'+
+                    '<span class="span1">'+data.pinpai+'</span>'+
+                    '<span class="span2">'+data.pinming+'</span>'+
+                    '<span class="span3">'+data.caizhi+'/'+data.biaomian+'</span>'+
+                    '<span class="span4">'+data.houdu+'*'+data.kuandu+'*C</span>'+
+                    '<span class="span5">'+data.bianbu+'</span>'+
+                    '<span class="span6">'+data.biaozhun+'</span>'+
+                    '<span class="span7">'+data.diqu+'</span>'+
+                    '<span class="span8">'+data.jibie+'</span>'+
+                    '<span class="span9">'+data.price+'(元/吨)</span>'+
+                    '<span class="span10">'+data.time+'</span>'+
+                    '<span class="span11">删除</span>'+
+                '</li>').prependTo(".content");
+
+
+               /*
+                *  ajax 发送data
+                */
             }
 
         });
@@ -300,24 +318,6 @@
             </ul>
         </div>
         <!-- main -->
-
-        <!-- 模板 -->
-        <div id="temple">
-            <li id="tpl1" class="content-item">
-                <span class="span1">山东宏旺</span>
-                <span class="span2">冷轧板材</span>
-                <span class="span3">304/2B</span>
-                <span class="span4">0.81*1500*C</span>
-                <span class="span5">M</span>
-                <span class="span6">GB</span>
-                <span class="span7">华南</span>
-                <span class="span8">一级</span>
-                <span class="span9">12,000.00(元/吨)</span>
-                <span class="span10">12:34</span>
-                <span class="span11">删除</span>
-            </li>
-        </div>
-
     </div>
     <!-- index -->
 </body>
