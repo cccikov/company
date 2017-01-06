@@ -25,8 +25,13 @@ body {
         color: #757575;
         .clearfix();
         .select{
-            float: left;
             position:relative;
+            z-index:10;
+            float: left;
+            width:88px;
+            line-height: 28px;
+            padding:0 0 0 10px;
+            border: 1px solid #e0e0e0;
             margin: 0 15px 0 0;
             &:after{
                 content:"";
@@ -36,28 +41,46 @@ body {
                 width:10px;
                 height:5px;
                 background: url(../img/arrow.png) center no-repeat;
-                pointer-events: none;
             }
-            select {
-                width:100px;
-                height: 30px;
-                line-height: 28px;
-                padding: 0 0 0 10px;
-                border: 1px solid #e0e0e0;
-                margin: 0 -1px;
-                color: inherit;
-                font-size: inherit;
-                vertical-align:middle;
-                appearance: none;
-                -moz-appearance: none;
-                /* Firefox */
-                -webkit-appearance: none;
-                /* Safari 和 Chrome */
-                &:focus{
-                    outline: none;
+            &.active{
+                z-index:11;
+                ul{
+                    display:block;
                 }
-                option{
-                    text-align: center;
+            }
+            ul{
+                display:none;
+                position:absolute;
+                top:29px;
+                left:-1px;
+                width:100%;
+                border:1px solid #7a9cd3;
+                background: #fff;
+                text-align: center;
+                li{
+                    height:28px;
+                    line-height:27px;
+                    &.active{
+                        height:28px;
+                        line-height:28px;
+                        background: #1e90ff;
+                        color:#fff;
+                        &:after{
+                            display:none;
+                        }
+                    }
+                    &:after{
+                        content:"";
+                        display:block;
+                        width:92%;
+                        margin:0 auto;
+                        border-bottom:1px solid #f8f8f8;
+                    }
+                    &:last-of-type{
+                        &:after{
+                            display:none;
+                        }
+                    }
                 }
             }
         }
