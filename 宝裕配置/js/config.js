@@ -44,6 +44,10 @@ $(function(){
     });
 
     $(".del").on("click",function(){
-        console.log("del");
+        $(".select").attr("data-val","").find("li").removeClass("active").end().each(function(){
+            var that = $(this);
+            var html = that.attr("data-html");
+            that.find("p").html(html);
+        });
     });
 });
