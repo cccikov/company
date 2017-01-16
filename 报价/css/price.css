@@ -12,6 +12,10 @@ iframe {
   display: block;
   width: 100%;
   border: none;
+  opacity: 0;
+}
+iframe.active {
+  opacity: 1;
 }
 .out {
   min-width: 1200px;
