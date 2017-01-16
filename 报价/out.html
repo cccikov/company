@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>报价</title>
+    <link rel="stylesheet" type="text/css" href="css/price.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $("#iframe").on("load",function(){
+                var that = $(this);
+                that.height($(window.frames['iframe'].document.body)[0].scrollHeight);
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="out">
+        <div class="top">
+            <div class="left-btn">
+                <a href="javascript:void(0)">当日报价</a>
+                <a class="active" href="javascript:void(0)">所有报价</a>
+                <a href="javascript:void(0)">收藏报价</a>
+                <a href="javascript:void(0)">自定义报价</a>
+            </div>
+            <div class="right-btn">
+                <a href="javascript:void(0)">自定义生成</a>
+            </div>
+        </div>
+        <iframe id="iframe" frameborder="0" name="iframe" src="in.html"></iframe>
+    </div>
+</body>
+</html>

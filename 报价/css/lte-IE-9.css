@@ -1,0 +1,13 @@
+.in .top .select:after {
+  display: none;
+}
+.in .top .select select {
+  height: auto;
+  padding: 5px 5px 5px 10px;
+}
+.in .main ul {
+  padding: 0 0 0 1.25%;
+}
+.in .main ul li {
+  width: 23.75%;
+}
