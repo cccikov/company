@@ -28,40 +28,43 @@ iframe{
 // out
 .out{
     min-width: 1200px;
-    max-width: 1300px;
-    margin: 0 auto;
     .top{
-        padding:15px;
+        padding:15px 15px 0;
         background: #fff;
         .clearfix();
         &:after{
             content:"";
             position:relative;
-            top:15px;
+            z-index: 1;
             display:block;
             border-bottom: 1px solid #eee;
         }
         a{
             float: left;
+            position:relative;
+            z-index: 10;
+            top:1px;
             width:98px;
+            margin:0 -1px 0 0;
+            line-height:28px;
             color:#42a5f5;
             text-align: center;
         }
         .left-btn{
             float: left;
             a{
-                line-height:30px;
-                margin:0 15px 0 0;
+                border:1px solid #eee;
                 &.active{
                     color:#fff;
                     background: #42a5f5;
+                    border:1px solid #42a5f5;
+                    z-index:100;
                 }
             }
         }
         .right-btn{
             float: right;
             a{
-                line-height:28px;
                 border:1px solid #42a5f5;
             }
         }
