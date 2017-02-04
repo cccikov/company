@@ -327,22 +327,20 @@
                     height: 0;
                     clear: both;
                 }
+                &:hover{
+                    background: #f3f3f3;
+                    transition: background 0.3s;
+                }
                 span{
                     float: left;
                     width:9.090909090%;
                     text-align: center;
                     color:#616161;
                 }
-
                 .span11{
                     a{
                         color:#ef5350;
                     }
-                }
-
-                &.waiting{
-                    text-align: center;
-                    color:#bdbdbd;
                 }
             }
             .last-item{
@@ -353,8 +351,16 @@
                 border-bottom:1px solid #f3f3f3;
                 border-bottom-left-radius: 15px;
                 border-bottom-right-radius: 15px;
-                margin: 0 030px;
+                margin: 0 0 30px;
                 background: #fff;
+            }
+            .waiting{
+                line-height:44px;
+                border-left:1px solid #f3f3f3;
+                border-right:1px solid #f3f3f3;
+                background: #fff;
+                text-align: center;
+                color:#bdbdbd;
             }
         }
         .content .content-item,.title{

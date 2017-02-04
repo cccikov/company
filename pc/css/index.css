@@ -320,6 +320,10 @@
   height: 0;
   clear: both;
 }
+#index .main .content .content-item:hover {
+  background: #f3f3f3;
+  transition: background 0.3s;
+}
 #index .main .content .content-item span {
   float: left;
   width: 9.090909090%;
@@ -329,10 +333,6 @@
 #index .main .content .content-item .span11 a {
   color: #ef5350;
 }
-#index .main .content .content-item.waiting {
-  text-align: center;
-  color: #bdbdbd;
-}
 #index .main .content .last-item {
   line-height: 44px;
   height: 44px;
@@ -341,8 +341,16 @@
   border-bottom: 1px solid #f3f3f3;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
-  margin: 0 030px;
+  margin: 0 0 30px;
   background: #fff;
+}
+#index .main .content .waiting {
+  line-height: 44px;
+  border-left: 1px solid #f3f3f3;
+  border-right: 1px solid #f3f3f3;
+  background: #fff;
+  text-align: center;
+  color: #bdbdbd;
 }
 #index .main .content .content-item .span6,
 #index .main .title .span6,

@@ -92,12 +92,8 @@ $(function() {
         $(".input").val("").add(iEle).removeClass("focus");
     }
 
-
-
-
-    // // 滚动加载
+    // 滚动加载
     $(window).on("scroll",function(){
-        console.log(canGetMore);
         if(canGetMore){//为了避免一直请求
             more();
         }
@@ -139,57 +135,21 @@ function footerBuild(data){
 var n = 0;
 // 加载更多
 function more(){
-    var data = [
-        {"pinpai":"山东宏旺6","pinming":"热轧卷材","caizhi":"305","biaomian":"3B","houdu":"0.81","kuandu":"1500","bianbu":"C","biaozhun":"JIS","diqu":"华北","jibie":"三级","price":"123.00","time":1486199539284}
-        ,{"pinpai":"山东宏旺6","pinming":"热轧卷材","caizhi":"305","biaomian":"3B","houdu":"0.81","kuandu":"1500","bianbu":"C","biaozhun":"JIS","diqu":"华北","jibie":"三级","price":"123.00","time":1486199539284}
-        ,{"pinpai":"山东宏旺6","pinming":"热轧卷材","caizhi":"305","biaomian":"3B","houdu":"0.81","kuandu":"1500","bianbu":"C","biaozhun":"JIS","diqu":"华北","jibie":"三级","price":"123.00","time":1486199539284}
-        ,{"pinpai":"山东宏旺6","pinming":"热轧卷材","caizhi":"305","biaomian":"3B","houdu":"0.81","kuandu":"1500","bianbu":"C","biaozhun":"JIS","diqu":"华北","jibie":"三级","price":"123.00","time":1486199539284}
-        ,{"pinpai":"山东宏旺6","pinming":"热轧卷材","caizhi":"305","biaomian":"3B","houdu":"0.81","kuandu":"1500","bianbu":"C","biaozhun":"JIS","diqu":"华北","jibie":"三级","price":"123.00","time":1486199539284}
-        ,{"pinpai":"山东宏旺6","pinming":"热轧卷材","caizhi":"305","biaomian":"3B","houdu":"0.81","kuandu":"1500","bianbu":"C","biaozhun":"JIS","diqu":"华北","jibie":"三级","price":"123.00","time":1486199539284}
-        ,{"pinpai":"山东宏旺6","pinming":"热轧卷材","caizhi":"305","biaomian":"3B","houdu":"0.81","kuandu":"1500","bianbu":"C","biaozhun":"JIS","diqu":"华北","jibie":"三级","price":"123.00","time":1486199539284}
-        ,{"pinpai":"山东宏旺6","pinming":"热轧卷材","caizhi":"305","biaomian":"3B","houdu":"0.81","kuandu":"1500","bianbu":"C","biaozhun":"JIS","diqu":"华北","jibie":"三级","price":"123.00","time":1486199539284}
-        ,{"pinpai":"山东宏旺6","pinming":"热轧卷材","caizhi":"305","biaomian":"3B","houdu":"0.81","kuandu":"1500","bianbu":"C","biaozhun":"JIS","diqu":"华北","jibie":"三级","price":"123.00","time":1486199539284}
-        ,{"pinpai":"山东宏旺6","pinming":"热轧卷材","caizhi":"305","biaomian":"3B","houdu":"0.81","kuandu":"1500","bianbu":"C","biaozhun":"JIS","diqu":"华北","jibie":"三级","price":"123.00","time":1486199539284}
-        ,{"pinpai":"山东宏旺6","pinming":"热轧卷材","caizhi":"305","biaomian":"3B","houdu":"0.81","kuandu":"1500","bianbu":"C","biaozhun":"JIS","diqu":"华北","jibie":"三级","price":"123.00","time":1486199539284}
-        ,{"pinpai":"山东宏旺6","pinming":"热轧卷材","caizhi":"305","biaomian":"3B","houdu":"0.81","kuandu":"1500","bianbu":"C","biaozhun":"JIS","diqu":"华北","jibie":"三级","price":"123.00","time":1486199539284}
-        ,{"pinpai":"山东宏旺6","pinming":"热轧卷材","caizhi":"305","biaomian":"3B","houdu":"0.81","kuandu":"1500","bianbu":"C","biaozhun":"JIS","diqu":"华北","jibie":"三级","price":"123.00","time":1486199539284}
-        ,{"pinpai":"山东宏旺6","pinming":"热轧卷材","caizhi":"305","biaomian":"3B","houdu":"0.81","kuandu":"1500","bianbu":"C","biaozhun":"JIS","diqu":"华北","jibie":"三级","price":"123.00","time":1486199539284}
-        ,{"pinpai":"山东宏旺6","pinming":"热轧卷材","caizhi":"305","biaomian":"3B","houdu":"0.81","kuandu":"1500","bianbu":"C","biaozhun":"JIS","diqu":"华北","jibie":"三级","price":"123.00","time":1486199539284}
-        ,{"pinpai":"山东宏旺6","pinming":"热轧卷材","caizhi":"305","biaomian":"3B","houdu":"0.81","kuandu":"1500","bianbu":"C","biaozhun":"JIS","diqu":"华北","jibie":"三级","price":"123.00","time":1486199539284}
-        ,{"pinpai":"山东宏旺6","pinming":"热轧卷材","caizhi":"305","biaomian":"3B","houdu":"0.81","kuandu":"1500","bianbu":"C","biaozhun":"JIS","diqu":"华北","jibie":"三级","price":"123.00","time":1486199539284}
-        ,{"pinpai":"山东宏旺6","pinming":"热轧卷材","caizhi":"305","biaomian":"3B","houdu":"0.81","kuandu":"1500","bianbu":"C","biaozhun":"JIS","diqu":"华北","jibie":"三级","price":"123.00","time":1486199539284}
-        ,{"pinpai":"山东宏旺6","pinming":"热轧卷材","caizhi":"305","biaomian":"3B","houdu":"0.81","kuandu":"1500","bianbu":"C","biaozhun":"JIS","diqu":"华北","jibie":"三级","price":"123.00","time":1486199539284}
-        ,{"pinpai":"山东宏旺6","pinming":"热轧卷材","caizhi":"305","biaomian":"3B","houdu":"0.81","kuandu":"1500","bianbu":"C","biaozhun":"JIS","diqu":"华北","jibie":"三级","price":"123.00","time":1486199539284}
-        ,{"pinpai":"山东宏旺6","pinming":"热轧卷材","caizhi":"305","biaomian":"3B","houdu":"0.81","kuandu":"1500","bianbu":"C","biaozhun":"JIS","diqu":"华北","jibie":"三级","price":"123.00","time":1486199539284}
-        ,{"pinpai":"山东宏旺6","pinming":"热轧卷材","caizhi":"305","biaomian":"3B","houdu":"0.81","kuandu":"1500","bianbu":"C","biaozhun":"JIS","diqu":"华北","jibie":"三级","price":"123.00","time":1486199539284}
-        ,{"pinpai":"山东宏旺6","pinming":"热轧卷材","caizhi":"305","biaomian":"3B","houdu":"0.81","kuandu":"1500","bianbu":"C","biaozhun":"JIS","diqu":"华北","jibie":"三级","price":"123.00","time":1486199539284}
-        ,{"pinpai":"山东宏旺6","pinming":"热轧卷材","caizhi":"305","biaomian":"3B","houdu":"0.81","kuandu":"1500","bianbu":"C","biaozhun":"JIS","diqu":"华北","jibie":"三级","price":"123.00","time":1486199539284}
-        ,{"pinpai":"山东宏旺6","pinming":"热轧卷材","caizhi":"305","biaomian":"3B","houdu":"0.81","kuandu":"1500","bianbu":"C","biaozhun":"JIS","diqu":"华北","jibie":"三级","price":"123.00","time":1486199539284}
-        ,{"pinpai":"山东宏旺6","pinming":"热轧卷材","caizhi":"305","biaomian":"3B","houdu":"0.81","kuandu":"1500","bianbu":"C","biaozhun":"JIS","diqu":"华北","jibie":"三级","price":"123.00","time":1486199539284}
-        ,{"pinpai":"山东宏旺6","pinming":"热轧卷材","caizhi":"305","biaomian":"3B","houdu":"0.81","kuandu":"1500","bianbu":"C","biaozhun":"JIS","diqu":"华北","jibie":"三级","price":"123.00","time":1486199539284}
-        ,{"pinpai":"山东宏旺6","pinming":"热轧卷材","caizhi":"305","biaomian":"3B","houdu":"0.81","kuandu":"1500","bianbu":"C","biaozhun":"JIS","diqu":"华北","jibie":"三级","price":"123.00","time":1486199539284}
-        ,{"pinpai":"山东宏旺6","pinming":"热轧卷材","caizhi":"305","biaomian":"3B","houdu":"0.81","kuandu":"1500","bianbu":"C","biaozhun":"JIS","diqu":"华北","jibie":"三级","price":"123.00","time":1486199539284}
-        ,{"pinpai":"山东宏旺6","pinming":"热轧卷材","caizhi":"305","biaomian":"3B","houdu":"0.81","kuandu":"1500","bianbu":"C","biaozhun":"JIS","diqu":"华北","jibie":"三级","price":"123.00","time":1486199539284}
-        ,{"pinpai":"山东宏旺6","pinming":"热轧卷材","caizhi":"305","biaomian":"3B","houdu":"0.81","kuandu":"1500","bianbu":"C","biaozhun":"JIS","diqu":"华北","jibie":"三级","price":"123.00","time":1486199539284}
-        ,{"pinpai":"山东宏旺6","pinming":"热轧卷材","caizhi":"305","biaomian":"3B","houdu":"0.81","kuandu":"1500","bianbu":"C","biaozhun":"JIS","diqu":"华北","jibie":"三级","price":"123.00","time":1486199539284}
-        ,{"pinpai":"山东宏旺6","pinming":"热轧卷材","caizhi":"305","biaomian":"3B","houdu":"0.81","kuandu":"1500","bianbu":"C","biaozhun":"JIS","diqu":"华北","jibie":"三级","price":"123.00","time":1486199539284}
-        ,{"pinpai":"山东宏旺6","pinming":"热轧卷材","caizhi":"305","biaomian":"3B","houdu":"0.81","kuandu":"1500","bianbu":"C","biaozhun":"JIS","diqu":"华北","jibie":"三级","price":"123.00","time":1486199539284}
-        ,{"pinpai":"山东宏旺6","pinming":"热轧卷材","caizhi":"305","biaomian":"3B","houdu":"0.81","kuandu":"1500","bianbu":"C","biaozhun":"JIS","diqu":"华北","jibie":"三级","price":"123.00","time":1486199539284}
-        ,{"pinpai":"山东宏旺6","pinming":"热轧卷材","caizhi":"305","biaomian":"3B","houdu":"0.81","kuandu":"1500","bianbu":"C","biaozhun":"JIS","diqu":"华北","jibie":"三级","price":"123.00","time":1486199539284}
-        ,{"pinpai":"山东宏旺6","pinming":"热轧卷材","caizhi":"305","biaomian":"3B","houdu":"0.81","kuandu":"1500","bianbu":"C","biaozhun":"JIS","diqu":"华北","jibie":"三级","price":"123.00","time":1486199539284}
-        ,{"pinpai":"山东宏旺6","pinming":"热轧卷材","caizhi":"305","biaomian":"3B","houdu":"0.81","kuandu":"1500","bianbu":"C","biaozhun":"JIS","diqu":"华北","jibie":"三级","price":"123.00","time":1486199539284}
-        ,{"pinpai":"山东宏旺6","pinming":"热轧卷材","caizhi":"305","biaomian":"3B","houdu":"0.81","kuandu":"1500","bianbu":"C","biaozhun":"JIS","diqu":"华北","jibie":"三级","price":"123.00","time":1486199539284}
-    ];
     if(isbottom()){
-        if(n==3){//假设3次就把数据加载完
+        if(n==2){//假设3次就把数据加载完
             end = true;
         }
         n++;
-        console.log("加载更多");
         canGetMore = false;//一旦请求数据,立即false,避免一直请求
         setTimeout(function(){
-
-            if(!end){
+            var data = moreData;
+            for(var i=0,len=data.length;i<len;i++){
+                footerBuild(data[i])
+            }
+            if(end){
+                $(".content-item").last().addClass("last-item");
+                $(".waiting").hide();
+            }else{
                 canGetMore = true;//当加载出来后,变成true,一旦有了新的内容,就证明是true了;
             }
         },1000);
@@ -210,8 +170,8 @@ function del(el){
     if(confirm("确定删除这条报价?")){
         var that = $(el);
         var parent = that.parents("li");
-        parent.height(parent.height());
-        setTimeout(function(){
+        parent.height(parent.height()).css("transition","height 0.5s");//如果是css本来就有transition的话，height加上去是需要时间的，所以会造成有时没有过渡效果
+        var timer = setTimeout(function(){
             parent.height(0);
             setTimeout(function(){
                 parent.remove();
