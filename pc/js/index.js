@@ -100,7 +100,7 @@ $(function() {
 });
 
  function bulid(data){
-    var that = $(' <li class="content-item" style="opacity: 0;transform:scale(0.5,0.5);transition:transform 0.3s,opacity 0.3s;">'+
+    var that = $(' <li class="content-item" style="height:0;transition:height 0.3s,opacity 0.3s;">'+
         '<span class="span1">'+data.pinpai+'</span>'+
         '<span class="span2">'+data.pinming+'</span>'+
         '<span class="span3">'+data.caizhi+'/'+data.biaomian+'</span>'+
@@ -116,7 +116,7 @@ $(function() {
     setTimeout(function(){
         that.css({
             "opacity":1,
-            "transform":"scale(1,1)"
+            "height":"45px"
         });
     },16.7);
 }
