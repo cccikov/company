@@ -28,7 +28,6 @@ $(function() {
         parent.removeClass("active").addClass("selected").height(28).attr("data-value",that.attr("data-value"));
 
         //全部选好,可以发布
-        console.log(hasSelect);
         if (hasSelect == 10 && $(".input").val().trim() != "") {
             $(".submit").addClass("canSubmit");
         }
@@ -80,7 +79,6 @@ $(function() {
         });
         data["price"]= fixNum($(".input").val());
         data["time"] = new Date().getTime();
-        console.log(JSON.stringify(data));
         bulid(data);
     }
 
@@ -90,6 +88,7 @@ $(function() {
         $(".option-default").parent().removeClass("selected").attr("data-value","");
         var iEle = $(".input").siblings("i");
         $(".input").val("").add(iEle).removeClass("focus");
+        hasSelect=0;
     }
 
     // 滚动加载
@@ -101,7 +100,7 @@ $(function() {
 });
 
  function bulid(data){
-    $(' <li class="content-item">'+
+    var that = $(' <li class="content-item" style="opacity: 0;transform:scale(0.5,0.5);transition:transform 0.3s,opacity 0.3s;">'+
         '<span class="span1">'+data.pinpai+'</span>'+
         '<span class="span2">'+data.pinming+'</span>'+
         '<span class="span3">'+data.caizhi+'/'+data.biaomian+'</span>'+
@@ -114,6 +113,12 @@ $(function() {
         '<span class="span10">'+formatDate(data.time)+'</span>'+
         '<span class="span11"><a href="javascript:void(0)" onclick="del(this)">删除</a></span>'+
     '</li>').prependTo(".content");
+    setTimeout(function(){
+        that.css({
+            "opacity":1,
+            "transform":"scale(1,1)"
+        });
+    },16.7);
 }
 
 function footerBuild(data){
