@@ -117,16 +117,19 @@
 /* 主页 */
 
 #index {
-    padding: 15px 0;
+    padding: 15px 0 0;
     font-family: "微软雅黑";
+    // 上部
     .top {
         width: 1200px;
         margin: 0 auto;
+        // left
         .left {
             float: left;
             width: 150px;
             line-height: 1em;
             min-height: 150px;
+            border:1px solid #f3f3f3;
             border-radius: 5px;
             text-align: center;
             background: #fff;
@@ -155,11 +158,13 @@
                 color: #bdbdbd;
             }
         }
+        // right
         .right {
             float: right;
             width: 978px;
             height: 120px;
             padding: 30px 16px 0 41px;
+            border:1px solid #f3f3f3;
             border-radius: 5px;
             background: #fff;
             .right-item {
@@ -286,6 +291,8 @@
             }
         }
     }
+
+    // 主要
     .main{
         width:1200px;
         margin : 15px auto 0;
@@ -306,15 +313,17 @@
         .content{
             .content-item{
                 line-height:44px;
-                border-left:1px solid #e0e0e0;
-                border-right:1px solid #e0e0e0;
+                border-left:1px solid #f3f3f3;
+                border-right:1px solid #f3f3f3;
                 background: #fff;
+                transition:height 0.5s;
+                overflow:hidden;
                 &:after {
                     content: "";
                     display: block;
                     width:98%;
                     margin :0 auto;
-                    border-bottom:1px solid #e0e0e0;
+                    border-bottom:1px solid #f3f3f3;
                     height: 0;
                     clear: both;
                 }
@@ -324,24 +333,38 @@
                     text-align: center;
                     color:#616161;
                 }
+
                 .span11{
-                     color:#ef5350;
+                    a{
+                        color:#ef5350;
+                    }
+                }
+
+                &.waiting{
+                    text-align: center;
+                    color:#bdbdbd;
                 }
             }
             .last-item{
                 line-height:44px;
                 height:44px;
-                border-left:1px solid #e0e0e0;
-                border-right:1px solid #e0e0e0;
-                border-bottom:1px solid #e0e0e0;
+                border-left:1px solid #f3f3f3;
+                border-right:1px solid #f3f3f3;
+                border-bottom:1px solid #f3f3f3;
                 border-bottom-left-radius: 15px;
                 border-bottom-right-radius: 15px;
+                margin: 0 030px;
                 background: #fff;
             }
         }
-    }
-    #temple{
-        display:none;
+        .content .content-item,.title{
+            .span6,.span7{
+                width:7.090909090%;
+            }
+            .span9{
+                width:13.090909090%;
+            }
+        }
     }
 }
 
