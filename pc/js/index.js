@@ -1,7 +1,6 @@
 var canGetMore = true;//标记滚动加载
 var end = false;//标记是否全部数据加载完毕
 $(function() {
-
     var hasSelect = 0;//用来标记有多少个选项被选上了
 
     /*选择 操作begin*/
@@ -69,6 +68,7 @@ $(function() {
     });
     /*发布按钮 end*/
 
+    // submit
     function submit(){
         var data = {};
         $(".select").each(function(item,key){
@@ -82,6 +82,7 @@ $(function() {
         bulid(data);
     }
 
+    //重置
     function reset(){
         $(".option-default").html("选择");
         $(".submit").removeClass("canSubmit");
@@ -99,7 +100,8 @@ $(function() {
     });
 });
 
- function bulid(data){
+// 从列表顶部添加新内容
+function bulid(data){
     var that = $(' <li class="content-item" style="height:0;transition:height 0.3s,opacity 0.3s;">'+
         '<span class="span1">'+data.pinpai+'</span>'+
         '<span class="span2">'+data.pinming+'</span>'+
@@ -121,6 +123,7 @@ $(function() {
     },16.7);
 }
 
+// 从列表底部添加新内容
 function footerBuild(data){
     $(' <li class="content-item">'+
         '<span class="span1">'+data.pinpai+'</span>'+
@@ -137,17 +140,19 @@ function footerBuild(data){
     '</li>').insertBefore(".waiting");
 }
 
-var n = 0;
+var n = 0;//用来模拟数据加载完毕 正式可删除
 // 加载更多
 function more(){
     if(isbottom()){
+
         if(n==2){//假设3次就把数据加载完
-            end = true;
+            end = true;//加载完毕后,end为true;
         }
         n++;
+
         canGetMore = false;//一旦请求数据,立即false,避免一直请求
-        setTimeout(function(){
-            var data = moreData;
+        setTimeout(function(){//模拟ajax请求
+            var data = moreData;//ajax获取数据;
             for(var i=0,len=data.length;i<len;i++){
                 footerBuild(data[i])
             }
@@ -155,7 +160,7 @@ function more(){
                 $(".content-item").last().addClass("last-item");
                 $(".waiting").hide();
             }else{
-                canGetMore = true;//当加载出来后,变成true,一旦有了新的内容,就证明是true了;
+                canGetMore = true;//当加载出来后,变成true(一旦有了新的内容,就证明是true了);
             }
         },1000);
     }
@@ -171,6 +176,7 @@ function isbottom(){
     return top<=winH+scrollTop;
 }
 
+// 列表删除操作
 function del(el){
     if(confirm("确定删除这条报价?")){
         var that = $(el);
