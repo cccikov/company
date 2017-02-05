@@ -1,115 +1,137 @@
 /* 登陆页 */
-#login {
-  position: relative;
-  height: 100%;
-  min-width: 1024px;
+#login .top {
+  position: absolute;
+  top: 45px;
+  left: 0;
   width: 100%;
-  text-align: center;
-  font-family: "微软雅黑";
-  font-size: 12px;
-  color: #fff;
+  transition: top 0.3s;
 }
-#login .middle {
+#login .top h1 {
+  color: #fff;
+  font: 62px/1em "微软雅黑";
+  text-align: center;
+}
+#login .main {
   position: absolute;
   top: 50%;
   left: 50%;
-  margin: -125px 0 0 -150px;
+  width: 300px;
+  height: 400px;
+  margin: -200px -150px;
+  color: #fff;
+  font-family: "微软雅黑";
+  transition: all 0.3s;
 }
-#login .middle .m-img {
+#login .main .btn-group {
+  position: relative;
+  margin: 0 0 16px;
+}
+#login .main .btn-group a {
+  float: left;
+  width: 150px;
+  line-height: 20px;
+  padding: 0 0 13px;
+  border-bottom: 1px solid #fff;
+  font-size: 16px;
+  color: inherit;
+  text-align: center;
+  transition: font-size 0.3s;
+}
+#login .main .btn-group a.active {
+  font-size: 18px;
+}
+#login .main .btn-group .line {
   position: absolute;
-  top: -86px;
+  bottom: 0;
   left: 0;
-  width: 100%;
+  width: 150px;
+  border-bottom: 2px solid #ffa726;
+  transition: left 0.3s;
 }
-#login .middle p {
+#login .main .content {
+  width: 300px;
+  overflow: hidden;
+}
+#login .main .content .tab-box {
+  width: 600px;
+}
+#login .main .content .tab-box .password-login {
+  width: 300px;
+  float: left;
+}
+#login .main .content .tab-box .password-login input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 12px 15px;
+  border: none;
+  border-radius: 8px;
+  margin: 7px 0;
+  color: #757575;
+  font-family: inherit;
+  font-size: 16px;
+}
+#login .main .content .tab-box .password-login input:focus {
+  outline: none;
+}
+#login .main .content .tab-box .password-login .wrong {
+  margin: 6px 0 7px;
+}
+#login .main .content .tab-box .password-login .wrong .tips {
+  margin: 0 0 13px;
+  font-size: 13px;
+  text-align: center;
+  color: #EF5350;
+}
+#login .main .content .tab-box .password-login .wrong input {
+  float: left;
+  width: 118px;
+  line-height: 35px;
+  padding: 0 15px;
+  margin: 0 15px 0 0;
+  border-radius: 5px;
+}
+#login .main .content .tab-box .password-login .wrong img {
+  float: left;
+  width: 117px;
+  height: 35px;
+  margin: 0 15px 0 0;
+  border-radius: 5px;
+}
+#login .main .content .tab-box .password-login .wrong a {
+  float: left;
+  width: 35px;
+  height: 35px;
+  border-radius: 5px;
+  background: #bdbdbd url(../img/refresh.png) center no-repeat;
+}
+#login .main .content .tab-box .password-login button {
+  width: 100%;
+  line-height: 42px;
+  border: none;
+  border-radius: 8px;
+  margin: 7px 0;
+  font-size: 16px;
+  font-family: "微软雅黑";
+  background: #ffa726;
+  color: #fff;
+}
+#login .main .content .tab-box .scan-login {
+  float: left;
+  width: 300px;
+  text-align: center;
+}
+#login .main .content .tab-box .scan-login p {
   margin: 15px 0;
   font-size: 16px;
 }
-#login .middle p ::-moz-placeholder {
-  color: #fff;
-  font-size: 16px;
-}
-#login .middle p ::-webkit-input-placeholder {
-  color: #fff;
-  font-size: 16px;
-}
-#login .middle p :-ms-input-placeholder {
-  color: #fff;
-  font-size: 16px;
-}
-#login .middle p input {
-  box-sizing: border-box;
-  height: 45px;
-  width: 300px;
-  padding: 0 15px;
-  border: none;
-  border-radius: 5px;
-  background: rgba(255, 255, 255, 0.35);
-  color: #fff;
-  letter-spacing: 1px;
-  word-spacing: 1px;
-  font-size: 16px;
-}
-#login .middle p input:focus {
-  outline: none;
-}
-#login .middle p button {
-  box-sizing: border-box;
-  height: 45px;
-  width: 300px;
-  border: none;
-  border-radius: 5px;
-  background: #42a5f5;
-  color: #fff;
-  font-size: 16px;
-}
-#login .middle .m-pw {
-  position: relative;
-}
-#login .middle .m-pw input {
-  padding: 0 55px 0 15px;
-}
-#login .middle .m-pw i {
-  position: absolute;
-  top: 11px;
-  right: 15px;
-  width: 22px;
-  height: 22px;
-  background: url(../img/visibility_off.png) center no-repeat;
-  cursor: pointer;
-}
-#login .middle .m-pw i.active {
-  background: url(../img/visibility.png) center no-repeat;
-}
-#login .middle .m-a {
-  position: absolute;
-  bottom: -20px;
-  left: 0;
-  width: 100%;
-}
-#login .middle .m-a a {
-  display: inline-block;
-  padding: 0 10px;
-  border-right: 1px solid #fff;
-}
 #login .footer {
   position: absolute;
-  bottom: 8px;
+  bottom: 20px;
   left: 0;
   width: 100%;
-}
-#login .footer .footer-line1 {
-  width: 320px;
-  margin: 0 auto 15px;
-}
-#login .footer .footer-line1 a {
-  box-sizing: border-box;
-  float: left;
-  width: 20%;
-  border-left: 1px solid #fff;
-}
-#login .no-border {
-  border: none !important;
+  color: #f9f9f9;
+  text-align: center;
+  font-size: 12px;
 }
 /* 主页 */
 #index {
@@ -361,4 +383,13 @@
 #index .main .content .content-item .span9,
 #index .main .title .span9 {
   width: 13.090909090%;
+}
+@media screen and (max-height: 700px) {
+  #login .top {
+    top: 10px;
+  }
+  #login .main {
+    height: 310px;
+    margin: -155px -150px;
+  }
 }

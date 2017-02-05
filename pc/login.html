@@ -5,65 +5,59 @@
     <title>登陆</title>
     <style type="text/css">
         html,body{
+            position: relative;
+            min-width: 1024px;
+            min-height: 500px;
             height:100%;
-            background: url(img/background.png) center no-repeat;
-            background-size: 1080;
+            background: url(img/loginBg.jpg) center/cover no-repeat;
         }
     </style>
     <link rel="stylesheet" type="text/css" href="css/common.css">
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/base.js"></script>
-    <script type="text/javascript">
-        $(function(){
-            $(".visi").on("click",function(e){
-                var that = $(this);
-                var input = that.siblings("input");
-                if(!that.is(".active")){
-                    that.addClass("active");
-                    input.attr("type","text");
-                }else{
-                    that.removeClass("active");
-                    input.attr("type","password");
-                }
-            });
-        });
-    </script>
 </head>
 <body>
     <!-- 登陆页 -->
     <div id="login">
-        <div class="middle">
-            <div class="m-img">
-                 <img src="img/logo.png" alt="logo">
+        <div class="top">
+            <h1>LOGO</h1>
+        </div>
+        <div class="main">
+            <div class="btn-group clearfix">
+                <a class="active" href="javascript:void(0)">密码登录</a>
+                <a href="javascript:void(0)">扫码登录</a>
+                <div class="line"></div>
             </div>
-            <p>
-                <input type="text" name="" placeholder="账户">
-            </p>
-            <p class="m-pw">
-                <input type="password" name="" placeholder="密码">
-                <i class="visi"></i>
-            </p>
-            <p>
-                <button>登陆</button>
-            </p>
-            <div class="m-a">
-                <a href="javascript:void(0)">帮助中心</a>
-                <a class="no-border" href="javascript:void(0)">忘记密码</a>
-            </div>
-        </div><!-- middle -->
+            <div class="content">
+                <div class="tab-box clearfix">
+
+                    <!-- 密码登录 -->
+                    <div class="password-login">
+                        <input type="text" name="" placeholder="账户">
+                        <input type="password" name="" placeholder="密码">
+                        <div class="wrong clearfix">
+                            <p class="tips">登录名或密码不正确！</p>
+                            <input type="text" name="" placeholder="二维码">
+                            <img src="img/validcode.jpg">
+                            <a href="javascript:void(0)"></a>
+                        </div>
+                        <button>登录</button>
+                    </div>
+
+                    <!-- 扫码登录 -->
+                    <div class="scan-login">
+                        <img src="img/qrcode.png">
+                        <p>打开微信 "扫一扫"</p>
+                    </div>
+
+                </div><!-- tab-box end -->
+            </div><!-- content end -->
+        </div><!-- main end -->
 
         <div class="footer">
-            <p class="footer-line1 clearfix">
-                <a class="no-border" href="javascript:void(0)">交易规则</a>
-                <a href="javascript:void(0)">免责声明</a>
-                <a href="javascript:void(0)">隐私条款</a>
-                <a href="javascript:void(0)">关于我们</a>
-                <a href="javascript:void(0)">联系我们</a>
-            </p>
-            <p class="footer-line2">Copyright © 2014-2016 粤ICP 备 15109338 号 拓港信息技术有限公司 版权所有</p>
-        </div><!-- footer -->
-
-    </div><!-- login -->
+            <p>xxxxxxxxxxxxxxx 备案信息 xxxxxxxxxxxxxxx</p>
+        </div><!-- footer end -->
+    </div><!-- login end -->
 </body>
 </html>
