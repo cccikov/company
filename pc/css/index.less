@@ -46,13 +46,23 @@
                 width:150px;
                 border-bottom:2px solid #ffa726;
                 transition:left 0.3s;
+                &.scan{
+                    left:150px;
+                }
             }
         }
         .content{
             width:300px;
             overflow:hidden;
             .tab-box{
+                position:relative;
+                left:0px;
+                top:0;
                 width:600px;
+                transition:left 0.3s;
+                &.scan{
+                    left:-300px;
+                }
                 // 密码登录
                 .password-login{
                     width:300px;
@@ -84,6 +94,7 @@
                             float: left;
                             width:118px;
                             line-height:35px;
+                            height:35px;
                             padding:0 15px;
                             margin:0 15px 0 0;
                             border-radius:5px;

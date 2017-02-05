@@ -10,12 +10,29 @@
             min-height: 500px;
             height:100%;
             background: url(img/loginBg.jpg) center/cover no-repeat;
+            background: url(img/loginBg.jpg) center no-repeat \9;//兼容ie8
         }
     </style>
     <link rel="stylesheet" type="text/css" href="css/common.css">
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/base.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $(".btn-group a").on("click",function(){
+                var that = $(this).addClass("active");
+                var another = that.siblings("a").removeClass("active");
+                var line = that.siblings(".line");
+                var box = $(".tab-box");
+                var _index = that.index(".btn-group a");
+                if(_index == 0){
+                    line.add(box).removeClass("scan");
+                }else{
+                    line.add(box).addClass("scan");
+                }
+            });
+        });
+    </script>
 </head>
 <body>
     <!-- 登陆页 -->

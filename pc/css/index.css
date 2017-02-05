@@ -48,12 +48,22 @@
   border-bottom: 2px solid #ffa726;
   transition: left 0.3s;
 }
+#login .main .btn-group .line.scan {
+  left: 150px;
+}
 #login .main .content {
   width: 300px;
   overflow: hidden;
 }
 #login .main .content .tab-box {
+  position: relative;
+  left: 0px;
+  top: 0;
   width: 600px;
+  transition: left 0.3s;
+}
+#login .main .content .tab-box.scan {
+  left: -300px;
 }
 #login .main .content .tab-box .password-login {
   width: 300px;
@@ -86,6 +96,7 @@
   float: left;
   width: 118px;
   line-height: 35px;
+  height: 35px;
   padding: 0 15px;
   margin: 0 15px 0 0;
   border-radius: 5px;
