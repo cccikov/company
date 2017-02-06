@@ -228,15 +228,13 @@ select:focus {
 /* 登录 */
 /* 登录 */
 #denglu .main .logo {
-  width: 6rem;
   height: 6rem;
   line-height: 6rem;
   margin: 5rem auto 2rem;
-  background: #eee;
   text-align: center;
 }
 #denglu .main .logo img {
-  max-width: 90%;
+  max-width: 60%;
   vertical-align: middle;
 }
 #denglu .main label {
@@ -280,7 +278,7 @@ select:focus {
   display: inline-block;
 }
 #denglu .main .h-f p a {
-  color: #ff7043;
+  color: #fff;
   padding: 0 0.8rem 0;
 }
 #denglu .main .h-f p a:nth-of-type(1) {
@@ -295,13 +293,12 @@ select:focus {
   left: 0;
   line-height: 2.5rem;
   width: 100%;
-  border-top: 1px solid #eaeaea;
   text-align: center;
   font-size: 0.8rem;
-  background: #f5f5f5;
+  background: rgba(177, 177, 177, 0.1) url(../img/footBg.png);
 }
 #denglu .footer a {
-  color: #ff7043;
+  color: #fff;
 }
 /* 注册 */
 /* 注册 */
