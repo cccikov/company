@@ -1573,3 +1573,91 @@ select:focus {
 #gerenxiangqing .footer .contact:before {
   background: url(../img/zhanghao_icon4.png) center / contain no-repeat;
 }
+/* 附近的人 */
+#nearby {
+  height: 100%;
+}
+#nearby .top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 40px;
+  border-bottom: 1px solid #eaeaea;
+  background: #fff;
+}
+#nearby .top span {
+  float: left;
+  line-height: 40px;
+  font-size: 16px;
+  font-family: "微软雅黑";
+  color: #ffa726;
+}
+#nearby .top span:before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin: -3px 10px 0 10px;
+  vertical-align: middle;
+  background: url(../img/person_pin.png) center / 22px no-repeat;
+}
+#nearby .top a {
+  float: right;
+  height: 40px;
+  width: 40px;
+  background: center / 26px no-repeat;
+}
+#nearby .main {
+  box-sizing: border-box;
+  height: 100%;
+  padding: 41px 0 0;
+  margin: 0;
+}
+#nearby .map {
+  height: 100%;
+}
+#nearby .map #map {
+  height: 100%;
+}
+#nearby .list {
+  display: none;
+}
+#nearby .list .near-list .near-item {
+  display: block;
+}
+#nearby .list .near-list .near-item img {
+  float: left;
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  margin: 12px 15px;
+}
+#nearby .list .near-list .near-item > div {
+  overflow: hidden;
+  border-bottom: 1px solid #eaeaea;
+  font-size: 14px;
+}
+#nearby .list .near-list .near-item > div p {
+  line-height: 1.5em;
+  font-family: "微软雅黑";
+}
+#nearby .list .near-list .near-item > div p:nth-of-type(1) {
+  padding: 6px 0 1px;
+  overflow: hidden;
+}
+#nearby .list .near-list .near-item > div p:nth-of-type(1) span:nth-of-type(1) {
+  float: right;
+  padding: 0 15px;
+  color: #9E9E9E;
+  font-size: 12px;
+}
+#nearby .list .near-list .near-item > div p:nth-of-type(1) span:nth-of-type(2) {
+  display: block;
+  overflow: hidden;
+  color: #424242;
+}
+#nearby .list .near-list .near-item > div p:nth-of-type(2) {
+  padding: 1px 0 6px;
+  color: #757575;
+}

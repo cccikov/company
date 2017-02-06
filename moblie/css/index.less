@@ -1655,4 +1655,94 @@ input ,textarea,select{
     }
 }
 
-
+/* 附近的人 */
+#nearby{
+    height:100%;
+    .top{
+        position:absolute;
+        top: 0;
+        left:0;
+        width:100%;
+        min-height:40px;
+        border-bottom:1px solid #eaeaea;
+        background: #fff;
+        span{
+            float: left;
+            line-height:40px;
+            font-size:16px;
+            font-family:"微软雅黑";
+            color:#ffa726;
+            &:before{
+                content:"";
+                display:inline-block;
+                width:20px;
+                height:20px;
+                margin:-3px 10px 0 10px;
+                vertical-align:middle;
+                background: url(../img/person_pin.png) center/22px  no-repeat;
+            }
+        }
+        a{
+            float: right;
+            height: 40px;
+            width:40px;
+            background: center/26px  no-repeat;
+        }
+    }
+    .main{
+        box-sizing:border-box;
+        height:100%;
+        padding:41px 0 0;
+        margin:0;
+    }
+    .map{
+        // display:none;
+        height:100%;
+        #map{
+            height:100%;
+        }
+    }
+    .list{
+        display:none;
+        .near-list{
+            .near-item{
+                display:block;
+                img{
+                    float: left;
+                    width:30px;
+                    height:30px;
+                    border-radius:15px;
+                    margin:12px 15px;
+                }
+                >div{
+                    overflow:hidden;
+                    border-bottom:1px solid #eaeaea;
+                    font-size:14px;
+                    p{
+                        line-height:1.5em;
+                        font-family:"微软雅黑";
+                        &:nth-of-type(1){
+                            padding:6px 0 1px;
+                            overflow:hidden;
+                            span:nth-of-type(1){
+                                float: right;
+                                padding:0 15px;
+                                color:#9E9E9E;
+                                font-size:12px;
+                            }
+                            span:nth-of-type(2){
+                                display:block;
+                                overflow:hidden;
+                                color:#424242;
+                            }
+                        }
+                        &:nth-of-type(2){
+                            padding:1px 0 6px;
+                            color:#757575;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

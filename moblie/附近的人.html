@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ch">
+
+<head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>百度地图api</title>
+    <style type="text/css">
+    html,
+    body {
+        height: 100%;
+    }
+    </style>
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=kuLkqU7eniGuCmSeOFQOQOBNAaqO18RX"></script>
+    <script type="text/javascript" src="js/nearby.js"></script>
+    <script type="text/javascript">
+        function toMap(){
+            $(".map").show().siblings(".list").hide();
+        }
+        function toList(){
+            $(".map").hide().siblings(".list").show();
+        }
+    </script>
+</head>
+
+<body>
+    <div id="nearby">
+        <div class="map">
+            <div class="top">
+                <span>附近的人</span>
+                <a href="javascript:void(0)" style="background-image: url(img/list.png)" onclick="toList()"></a>
+            </div>
+            <div class="main">
+                <!-- 百度地图 -->
+                <div id="map"></div>
+            </div>
+        </div>
+        <div class="list">
+            <div class="top">
+                <span>附近的人</span>
+                <a href="javascript:void(0)" style="background-image: url(img/map.png)" onclick="toMap()"></a>
+            </div>
+            <div class="main">
+                <!-- 附近的人列表 -->
+                <div class="near-list">
+                    <a class="near-item clearfix" href="javascript:void(0)">
+                        <img src="img/map/l1.png">
+                        <div>
+                            <p>
+                                <span>2km</span>
+                                <span>公司1</span>
+                            </p>
+                            <p>我们公司主要经营各种优质不锈钢，价美物廉</p>
+                        </div>
+                    </a>
+
+                    <a class="near-item clearfix" href="javascript:void(0)">
+                        <img src="img/map/l2.png">
+                        <div>
+                            <p>
+                                <span>1km</span>
+                                <span>公司2</span>
+                            </p>
+                            <p>即便交易不成也可以做朋友</p>
+                        </div>
+                    </a>
+
+                    <a class="near-item clearfix" href="javascript:void(0)">
+                        <img src="img/map/l3.png">
+                        <div>
+                            <p>
+                                <span>5km</span>
+                                <span>公司3</span>
+                            </p>
+                            <p>希望合作愉快</p>
+
+                        </div>
+                    </a>
+
+                    <a class="near-item clearfix" href="javascript:void(0)">
+                        <img src="img/map/l4.png">
+                        <div>
+                            <p>
+                                <span>0.8km</span>
+                                <span>公司4</span>
+                            </p>
+                            <p>我们公司主要经营各种优质不锈钢，价美物廉</p>
+                        </div>
+                    </a>
+
+                    <a class="near-item clearfix" href="javascript:void(0)">
+                        <img src="img/map/l5.png">
+                        <div>
+                            <p>
+                                <span>1.5km</span>
+                                <span>公司5</span>
+                            </p>
+                            <p>我们公司主要经营各种优质不锈钢，价美物廉</p>
+                        </div>
+                    </a>
+
+                    <a class="near-item clearfix" href="javascript:void(0)">
+                        <img src="img/map/l6.png">
+                        <div>
+                            <p>
+                                <span>距离比较远</span>
+                                <span>公司6</span>
+                            </p>
+                            <p>本公司诚信经营，客户都说好</p>
+                        </div>
+                    </a>
+
+                    <a class="near-item clearfix" href="javascript:void(0)">
+                        <img src="img/map/l7.png">
+                        <div>
+                            <p>
+                                <span>距离比较远</span>
+                                <span>公司7</span>
+                            </p>
+                            <p>我们公司主要经营各种优质不锈钢，价美物廉</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
