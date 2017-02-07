@@ -300,14 +300,17 @@ select:focus {
 #denglu .footer a {
   color: #fff;
 }
-/* 注册 */
-/* 注册 */
+/* 资料完善 */
+/* 资料完善 */
+#ziliaowanshan .head h1:before,
 #zhuce .head h1:before {
   background-image: url(../img/register-01.png);
 }
+#ziliaowanshan .main label,
 #zhuce .main label {
   display: block;
 }
+#ziliaowanshan .main input,
 #zhuce .main input {
   width: 100%;
   padding: 0.65rem;
@@ -317,17 +320,21 @@ select:focus {
   font-size: 0.9rem;
   color: #757575;
 }
+#ziliaowanshan .main .p-list .p-item,
 #zhuce .main .p-list .p-item {
   margin: 15px 0;
 }
+#ziliaowanshan .main .p-list .p-item label .p-title,
 #zhuce .main .p-list .p-item label .p-title {
   display: inline-block;
   margin: 3px 0;
 }
+#ziliaowanshan .main .p-list .p-item label .p-cont-apart input,
 #zhuce .main .p-list .p-item label .p-cont-apart input {
   float: left;
   width: 48%;
 }
+#ziliaowanshan .main .p-list .p-item label .p-cont-apart select,
 #zhuce .main .p-list .p-item label .p-cont-apart select {
   padding: 0.65rem;
   border: 1px solid #ccc;
@@ -337,14 +344,17 @@ select:focus {
   color: #757575;
   background: #fff;
 }
+#ziliaowanshan .main .p-list .p-item label .p-cont-apart select:nth-of-type(1),
 #zhuce .main .p-list .p-item label .p-cont-apart select:nth-of-type(1) {
   float: left;
   width: 48%;
 }
+#ziliaowanshan .main .p-list .p-item label .p-cont-apart select:nth-of-type(2),
 #zhuce .main .p-list .p-item label .p-cont-apart select:nth-of-type(2) {
   float: right;
   width: 48%;
 }
+#ziliaowanshan .main .p-list .p-item label .p-cont-apart .msg-id,
 #zhuce .main .p-list .p-item label .p-cont-apart .msg-id {
   float: right;
   width: 48%;
@@ -356,9 +366,11 @@ select:focus {
   text-align: center;
   color: #fff;
 }
+#ziliaowanshan .xieyi,
 #zhuce .xieyi {
   margin: 1.65rem 0 1rem;
 }
+#ziliaowanshan .xieyi a,
 #zhuce .xieyi a {
   color: #42a5f5;
 }
