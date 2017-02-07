@@ -17,7 +17,7 @@
   left: 50%;
   width: 300px;
   height: 400px;
-  margin: -200px -150px;
+  margin: -200px 0 0 -150px;
   color: #fff;
   font-family: "微软雅黑";
   transition: all 0.3s;
@@ -126,6 +126,13 @@
   background: #ffa726;
   color: #fff;
 }
+#login .main .content .tab-box .password-login .register {
+  margin: 13px 0;
+  text-align: center;
+}
+#login .main .content .tab-box .password-login .register a {
+  font-size: 15px;
+}
 #login .main .content .tab-box .scan-login {
   float: left;
   width: 300px;
@@ -136,6 +143,195 @@
   font-size: 16px;
 }
 #login .footer {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  width: 100%;
+  color: #f9f9f9;
+  text-align: center;
+  font-size: 12px;
+}
+@media screen and (max-height: 700px) {
+  #login .top {
+    top: 10px;
+  }
+  #login .main {
+    height: 310px;
+    margin: -155px -150px;
+  }
+}
+/* 注册 */
+#register .top {
+  position: absolute;
+  top: 45px;
+  left: 0;
+  width: 100%;
+  transition: top 0.3s;
+}
+#register .top h1 {
+  color: #fff;
+  font: 62px/1em "微软雅黑";
+  text-align: center;
+}
+#register .main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 500px;
+  margin: -250px -150px;
+  color: #fff;
+  font-family: "微软雅黑";
+  transition: all 0.3s;
+}
+#register .main .btn-group {
+  position: relative;
+  margin: 0 0 16px;
+}
+#register .main .btn-group a {
+  display: inline-block;
+  width: 100%;
+  line-height: 20px;
+  padding: 0 0 13px;
+  border-bottom: 2px solid #ffa726;
+  font-size: 20px;
+  color: inherit;
+  text-align: center;
+  transition: font-size 0.3s;
+}
+#register .main .content {
+  width: 300px;
+}
+#register .main .content label {
+  position: relative;
+  display: block;
+  margin: 12px 0;
+}
+#register .main .content label span {
+  font-size: 16px;
+}
+#register .main .content label input {
+  box-sizing: border-box;
+  width: 100%;
+  line-height: 42px;
+  height: 42px;
+  padding: 0 15px;
+  border: none;
+  border-radius: 8px;
+  margin: 8px 0 0;
+  color: #757575;
+  font-family: inherit;
+  font-size: 16px;
+}
+#register .main .content label input:focus {
+  outline: none;
+}
+#register .main .content label input.wrong {
+  color: #f00;
+  box-shadow: 0px 0px 2px #f00;
+}
+#register .main .content label a {
+  display: none;
+  position: absolute;
+  bottom: 9px;
+  right: 9px;
+  width: 24px;
+  height: 24px;
+  background: url(../img/wrong.png);
+}
+#register .main .content label a.active {
+  display: block;
+}
+#register .main .content .city {
+  margin: 12px 0;
+}
+#register .main .content .city p {
+  margin: 0 0 8px;
+  font-size: 16px;
+}
+#register .main .content .city select {
+  box-sizing: border-box;
+  float: left;
+  height: 42px;
+  height: auto \9;
+  line-height: 42px;
+  width: 48%;
+  padding: 0 8px 0 15px;
+  padding: 10px 8px 10px 15px \9;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: inherit;
+  color: #979797;
+  appearance: none;
+  -moz-appearance: none;
+  /* Firefox */
+  -webkit-appearance: none;
+  /* Safari 和 Chrome */
+}
+#register .main .content .city select::-ms-expand {
+  /* ie10以及以上 */
+  display: none;
+}
+#register .main .content .city select.select1 {
+  margin: 0 4% 0 0;
+}
+#register .main .content button {
+  width: 100%;
+  line-height: 42px;
+  border: none;
+  border-radius: 8px;
+  margin: 7px 0;
+  font-size: 16px;
+  font-family: "微软雅黑";
+  background: #ffa726;
+  color: #fff;
+}
+#register .footer {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  width: 100%;
+  color: #f9f9f9;
+  text-align: center;
+  font-size: 12px;
+}
+@media screen and (max-height: 700px) {
+  #register .top {
+    top: 10px;
+  }
+  #register .main {
+    margin: -225px 0 0 -150px;
+  }
+}
+/* 注册成功 */
+#success .top {
+  position: absolute;
+  top: 45px;
+  left: 0;
+  width: 100%;
+  transition: top 0.3s;
+}
+#success .top h1 {
+  color: #fff;
+  font: 62px/1em "微软雅黑";
+  text-align: center;
+}
+#success .main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 240px;
+  height: 131px;
+  margin: -100px 0 0 -120px;
+  text-align: center;
+}
+#success .main p {
+  color: #fff;
+  font-size: 24px;
+  font-family: "微软雅黑";
+}
+#success .footer {
   position: absolute;
   bottom: 20px;
   left: 0;
@@ -394,13 +590,4 @@
 #index .main .content .content-item .span9,
 #index .main .title .span9 {
   width: 13.090909090%;
-}
-@media screen and (max-height: 700px) {
-  #login .top {
-    top: 10px;
-  }
-  #login .main {
-    height: 310px;
-    margin: -155px -150px;
-  }
 }
