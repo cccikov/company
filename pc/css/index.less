@@ -509,14 +509,15 @@
                 }
                 a {
                     box-sizing: border-box;
-                    display: block;
+                    display:inline-block;
+                    width:48%;
                     height: 30px;
                     line-height: 30px;
                     text-align: center;
                     border-radius: 15px;
                     background: #e0e0e0;
                     color: #fff;
-                    &:before {
+                    &.submit:before {
                         content: "";
                         display: inline-block;
                         width: 20px;
@@ -525,12 +526,16 @@
                         vertical-align: middle;
                         background: url(../img/no.png) center no-repeat;
                     }
-                    &.canSubmit {
+                    &.submit.canSubmit {
                         cursor: pointer;
                         background: #ffa726;
                         &:before {
                             background: url(../img/done.png) center no-repeat;
                         }
+                    }
+                    &.publish{
+                        background: #ffa726;
+                        cursor:pointer;
                     }
                 }
             }

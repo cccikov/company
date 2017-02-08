@@ -490,7 +490,8 @@
 }
 #index .top .right .right-item a {
   box-sizing: border-box;
-  display: block;
+  display: inline-block;
+  width: 48%;
   height: 30px;
   line-height: 30px;
   text-align: center;
@@ -498,7 +499,7 @@
   background: #e0e0e0;
   color: #fff;
 }
-#index .top .right .right-item a:before {
+#index .top .right .right-item a.submit:before {
   content: "";
   display: inline-block;
   width: 20px;
@@ -507,12 +508,16 @@
   vertical-align: middle;
   background: url(../img/no.png) center no-repeat;
 }
-#index .top .right .right-item a.canSubmit {
+#index .top .right .right-item a.submit.canSubmit {
   cursor: pointer;
   background: #ffa726;
 }
-#index .top .right .right-item a.canSubmit:before {
+#index .top .right .right-item a.submit.canSubmit:before {
   background: url(../img/done.png) center no-repeat;
+}
+#index .top .right .right-item a.publish {
+  background: #ffa726;
+  cursor: pointer;
 }
 #index .main {
   width: 1200px;
