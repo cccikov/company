@@ -1,4 +1,6 @@
 $(function(){
+
+    /**/
     $(".select").on("click",function(e){
         e.stopPropagation();
         var that = $(this);
@@ -15,7 +17,7 @@ $(function(){
             that.removeClass("active");
             $(window).off("click.select");
         }
-    }).each(function(item,key){
+    }).each(function(item,key){//记住 全部XX 如果写html的时候,在.select写上data-html就可以不要这个each这个方法
         var that = $(key);
         var html = that.find("p").html();
         that.attr("data-html",html);
@@ -31,7 +33,7 @@ $(function(){
         if(!that.is(".active")){
             that.addClass("active");
             val.push(thisVal);
-        }else{
+        }else{//如果取消active,则在val数组中删除
             val.splice(val.indexOf(thisVal),1);
             that.removeClass("active");
         }
@@ -43,6 +45,8 @@ $(function(){
         parent.attr("data-val",JSON.stringify(val));
     });
 
+
+    /*清空操作*/
     $(".del").on("click",function(){
         $(".select").attr("data-val","").find("li").removeClass("active").end().each(function(){
             var that = $(this);
