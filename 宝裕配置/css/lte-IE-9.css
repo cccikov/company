@@ -1,7 +1,0 @@
-.wrap .top .select:after {
-  display: none;
-}
-.wrap .top .select select {
-  height: auto;
-  padding: 5px 5px 5px 10px;
-}
