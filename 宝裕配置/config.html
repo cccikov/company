@@ -10,6 +10,12 @@
     <!--[if lte IE 9]>
         <link rel="stylesheet" type="text/css" href="css/lte-IE-9.css">
     <![endif]-->
+    <script type="text/javascript">
+        $(function(){
+            $(".select").eq(0).setval(["1","2"]);
+            console.log($("li[data-val=03]"));
+        });
+    </script>
 </head>
 
 <body>
@@ -19,15 +25,15 @@
             <a class="select"  id="chanpin" href="javascript:void(0)">
                 <p>全部产品</p>
                 <ul>
-                    <li data-val="chanpin1">产品1</li>
-                    <li data-val="chanpin2">产品2</li>
-                    <li data-val="chanpin3">产品3</li>
-                    <li data-val="chanpin4">产品4</li>
-                    <li data-val="chanpin5">产品5</li>
-                    <li data-val="chanpin6">产品6</li>
-                    <li data-val="chanpin7">产品7</li>
-                    <li data-val="chanpin8">产品8</li>
-                    <li data-val="chanpin9">产品9</li>
+                    <li data-val="1">产品1</li>
+                    <li data-val="2">产品2</li>
+                    <li data-val="3">产品3</li>
+                    <li data-val="4">产品4</li>
+                    <li data-val="5">产品5</li>
+                    <li data-val="6">产品6</li>
+                    <li data-val="7">产品7</li>
+                    <li data-val="8">产品8</li>
+                    <li data-val="9">产品9</li>
                 </ul>
             </a>
             <a href="javascript:void(0)" id="diqu" class="select">

@@ -33,6 +33,7 @@ $(function() {
         "setval":function(val){
             val = typeof val == "string" ? JSON.parse(val) : val;
             var that = $(this);
+            that.attr("data-val",JSON.stringify(val));
             if(that.attr("class").indexOf("select")>-1){
                 var p = that.find("p");
                 var len = val.length;
