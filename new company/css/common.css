@@ -4,16 +4,17 @@
   border-right: 1px solid #757575;
 }
 .wrap {
-  min-width: 1349px;
   font-family: "\5FAE\8F6F\96C5\9ED1";
 }
-.wrap .nav {
+.nav {
+  width: 1366px;
   line-height: 60px;
+  margin: 0 auto;
   font-size: 16px;
   background: #fff;
   *zoom: 1;
 }
-.wrap .nav:after {
+.nav:after {
   display: block;
   overflow: hidden;
   clear: both;
@@ -21,34 +22,38 @@
   visibility: hidden;
   content: ".";
 }
-.wrap .nav .nav-img {
+.nav .nav-img {
   float: left;
-  margin: 0 0 0 82px;
 }
-.wrap .nav .nav-img img {
+.nav .nav-img img {
   vertical-align: middle;
 }
-.wrap .nav .nav-list {
+.nav .nav-list {
   float: right;
-  margin: 0 82px 0 0;
 }
-.wrap .nav .nav-list a {
+.nav .nav-list a {
   float: left;
   width: 100px;
   color: #424242;
   text-align: center;
 }
-.wrap .nav .nav-list a.active {
+.nav .nav-list a.active {
   background: #42A5F5;
   color: #fff;
 }
-.wrap .footer {
+.main {
+  width: 1366px;
+  margin: 0 auto;
+}
+.footer {
+  width: 1366px;
   line-height: 50px;
+  margin: 0 auto;
   font-size: 14px;
   color: #757575;
   *zoom: 1;
 }
-.wrap .footer:after {
+.footer:after {
   display: block;
   overflow: hidden;
   clear: both;
@@ -56,21 +61,59 @@
   visibility: hidden;
   content: ".";
 }
-.wrap .footer .footer-right {
+.footer .footer-right {
   float: left;
-  margin: 0 0 0 82px;
 }
-.wrap .footer .footer-right span {
+.footer .footer-right span {
   display: inline-block;
   line-height: 1em;
   padding: 0 10px 0 5px;
 }
-.wrap .footer .footer-link {
+.footer .footer-link {
   float: right;
-  margin: 0 82px 0 0;
 }
-.wrap .footer .footer-link a {
+.footer .footer-link a {
   display: inline-block;
   line-height: 1em;
   padding: 0 10px 0 7px;
+}
+@media screen and (max-width: 1366px) {
+  .wrap {
+    width: 1349px;
+    margin: 0 auto;
+  }
+  .wrap .nav {
+    width: 1185px;
+    padding: 0 82px;
+    margin: 0 auto;
+  }
+  .wrap .main {
+    width: 1185px;
+    padding: 0 82px;
+    margin: 0 auto;
+  }
+  .wrap .footer {
+    width: 1185px;
+    padding: 0 82px;
+    margin: 0 auto;
+  }
+}
+.ie8 .wrap {
+  width: 1349px;
+  margin: 0 auto;
+}
+.ie8 .wrap .nav {
+  width: 1185px;
+  padding: 0 82px;
+  margin: 0 auto;
+}
+.ie8 .wrap .main {
+  width: 1185px;
+  padding: 0 82px;
+  margin: 0 auto;
+}
+.ie8 .wrap .footer {
+  width: 1185px;
+  padding: 0 82px;
+  margin: 0 auto;
 }

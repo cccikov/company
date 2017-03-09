@@ -1,1 +1,81 @@
 @charset "utf-8";
+.wrap .carousel {
+  background: #fcfcfc;
+}
+.wrap .carousel .swiper-container {
+  position: relative;
+  width: 1366px;
+  height: 340px;
+}
+.wrap .carousel .swiper-container .swiper-slide img {
+  width: 100%;
+}
+.wrap .carousel .swiper-container .pagination {
+  position: absolute;
+  z-index: 20;
+  bottom: 15px;
+  width: 100%;
+  text-align: center;
+}
+.wrap .carousel .swiper-container .pagination .swiper-pagination-switch {
+  display: inline-block;
+  width: 20px;
+  height: 4px;
+  margin: 0 10px;
+  background: #fff;
+  cursor: pointer;
+  transition: width 0.3s, background 0.3s;
+}
+.wrap .carousel .swiper-container .pagination .swiper-pagination-switch.swiper-active-switch {
+  width: 40px;
+  background: #42A5F5;
+}
+.wrap .main h5 {
+  margin: 28px 0 22px;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  color: #757575;
+}
+.wrap .main .business p {
+  *zoom: 1;
+}
+.wrap .main .business p:after {
+  display: block;
+  overflow: hidden;
+  clear: both;
+  height: 0;
+  visibility: hidden;
+  content: ".";
+}
+.wrap .main .business p a {
+  float: left;
+  margin: 0 46.5px 0 0;
+}
+.wrap .main .business p a.no-margin {
+  margin: 0;
+}
+.wrap .footer {
+  height: 75px;
+  line-height: 30px;
+  padding: 20px 0 0;
+}
+.wrap .footer p {
+  float: none;
+  margin: 0;
+  text-align: center;
+}
+@media screen and (max-width: 1366px) {
+  .wrap .carousel .swiper-container {
+    width: 1349px;
+  }
+  .wrap .main .business p a {
+    margin: 0 1px 0 0;
+  }
+}
+.ie8 .wrap .carousel .swiper-container {
+  width: 1349px;
+}
+.ie8 .wrap .main .business p a {
+  margin: 0 1px 0 0;
+}

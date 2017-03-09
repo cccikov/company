@@ -1,1 +1,120 @@
 @charset "utf-8";
+.clearfix() {
+    //清浮动
+    *zoom: 1;
+    &:after {
+        display: block;
+        overflow: hidden;
+        clear: both;
+        height: 0;
+        visibility: hidden;
+        content: ".";
+    }
+}
+
+.wrap {
+    // 轮播
+    .carousel {
+        background: #fcfcfc;
+        // 轮播插件
+        .swiper-container {
+            position: relative;
+            width: 1366px;
+            height: 340px;
+            .swiper-slide {
+                img {
+                    width: 100%;
+                }
+            }
+            .pagination {
+                position: absolute;
+                z-index: 20;
+                bottom: 15px;
+                width: 100%;
+                text-align: center;
+                .swiper-pagination-switch {
+                    display: inline-block;
+                    width: 20px;
+                    height: 4px;
+                    margin: 0 10px;
+                    background: #fff;
+                    cursor: pointer;
+                    transition: width 0.3s, background 0.3s;
+                    &.swiper-active-switch {
+                        width: 40px;
+                        background: #42A5F5;
+                    }
+                }
+            }
+        }
+    }
+    // 主要
+    .main {
+        h5 {
+            margin: 28px 0 22px;
+            font-size: 20px;
+            font-weight: 700;
+            text-align: center;
+            color: #757575;
+        }
+        .business {
+            p {
+                .clearfix();
+                a {
+                    float: left;
+                    margin: 0 46.5px 0 0;
+                    &.no-margin {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+    // 底部
+    .footer {
+        height: 75px;
+        line-height: 30px;
+        padding: 20px 0 0;
+        p {
+            float: none;
+            margin: 0;
+            text-align: center;
+        }
+    }
+}
+
+.narrow() {
+    //窄 ie8
+    .wrap {
+        // 导航
+        .nav {}
+        // 轮播
+        .carousel {
+            .swiper-container {
+                width: 1349px;
+            }
+        }
+        // 主要
+        .main {
+            .business {
+                p {
+                    a {
+                        margin: 0 1px 0 0;
+                    }
+                }
+            }
+        }
+        // 底部
+        .footer {
+
+        }
+    }
+}
+
+@media screen and (max-width: 1366px) {
+    .narrow()
+}
+
+.ie8 {
+    .narrow();
+}

@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>首页</title>
+    <link rel="stylesheet" type="text/css" href="plug/idangerous.swiper.css">
     <link rel="stylesheet" type="text/css" href="css/common.css">
     <link rel="stylesheet" type="text/css" href="css/home.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="plug/idangerous.swiper.min.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="js/home.js"></script>
 </head>
+
 <body>
     <div class="wrap">
-
         <!-- 导航 -->
         <div class="nav">
             <div class="nav-img">
-                <img src="img/common/logo.png">
+                <a href="index.html"><img src="img/common/logo.png"></a>
             </div>
             <div class="nav-list">
                 <a class="active" href="index.html">首页</a>
@@ -23,12 +29,35 @@
                 <a href="about.html">关于</a>
             </div>
         </div>
-
+        <!-- 轮播 -->
+        <div class="carousel">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide swiper-active-switch"><img src="img/test/test1.png"></div>
+                    <div class="swiper-slide"><img src="img/test/test1.png"></div>
+                    <div class="swiper-slide"><img src="img/test/test1.png"></div>
+                </div>
+                <div class="pagination"></div>
+            </div>
+        </div>
         <!-- 主要内容 -->
         <div class="main">
-
+            <div class="business">
+                <h5>业务覆盖</h5>
+                <div>
+                    <p>
+                        <a href="javascript:void(0)"><img src="img/home/home1.png" alt=""></a>
+                        <a href="javascript:void(0)"><img src="img/home/home2.png" alt=""></a>
+                        <a href="javascript:void(0)"><img src="img/home/home3.png" alt=""></a>
+                        <a href="javascript:void(0)"><img src="img/home/home4.png" alt=""></a>
+                        <a class="no-margin" href="javascript:void(0)"><img src="img/home/home5.png" alt=""></a>
+                    </p>
+                </div>
+            </div>
+            <div class="part">
+                <h5>主营产品</h5>
+            </div>
         </div>
-
         <!-- 底部 -->
         <div class="footer">
             <p class="footer-link">
@@ -45,4 +74,5 @@
         </div>
     </div>
 </body>
+
 </html>
