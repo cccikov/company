@@ -1,6 +1,6 @@
 @charset "utf-8";
 .wrap .carousel {
-  background: #fcfcfc;
+  background: #fbfbfb;
 }
 .wrap .carousel .swiper-container {
   position: relative;
@@ -31,16 +31,18 @@
   background: #42A5F5;
 }
 .wrap .main h5 {
-  margin: 28px 0 22px;
   font-size: 20px;
   font-weight: 700;
   text-align: center;
   color: #757575;
 }
-.wrap .main .business p {
+.wrap .main .main-business h5 {
+  margin: 28px 0 22px;
+}
+.wrap .main .main-business p {
   *zoom: 1;
 }
-.wrap .main .business p:after {
+.wrap .main .main-business p:after {
   display: block;
   overflow: hidden;
   clear: both;
@@ -48,12 +50,53 @@
   visibility: hidden;
   content: ".";
 }
-.wrap .main .business p a {
+.wrap .main .main-business p a {
   float: left;
   margin: 0 46.5px 0 0;
 }
-.wrap .main .business p a.no-margin {
+.wrap .main .main-business p a.no-margin {
   margin: 0;
+}
+.wrap .main .main-product .product-list {
+  *zoom: 1;
+}
+.wrap .main .main-product .product-list:after {
+  display: block;
+  overflow: hidden;
+  clear: both;
+  height: 0;
+  visibility: hidden;
+  content: ".";
+}
+.wrap .main .main-product .product-list .product-item {
+  display: block;
+  float: left;
+  width: 666px;
+  height: 200px;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  margin-bottom: 30px;
+}
+.wrap .main .main-product .product-list .product-item:nth-of-type(2n+2) {
+  margin-left: 30px;
+}
+.wrap .main .main-product .product-list .product-item .item-left {
+  float: left;
+  width: 285px;
+  line-height: 200px;
+  text-align: center;
+}
+.wrap .main .main-product .product-list .product-item .item-left img {
+  max-width: 100%;
+  max-height: 200px;
+  vertical-align: middle;
+}
+.wrap .main .main-product .product-list .product-item .item-right {
+  overflow: hidden;
+}
+.wrap .main .main-product .product-list .product-item .item-right p {
+  padding: 0 0 0 8px;
+  background: url(../img/home/point2.png) left 2px center no-repeat;
 }
 .wrap .footer {
   height: 75px;
@@ -65,17 +108,17 @@
   margin: 0;
   text-align: center;
 }
-@media screen and (max-width: 1366px) {
+@media screen and (max-width: 1383px) {
   .wrap .carousel .swiper-container {
     width: 1349px;
   }
-  .wrap .main .business p a {
+  .wrap .main .main-business p a {
     margin: 0 1px 0 0;
   }
 }
 .ie8 .wrap .carousel .swiper-container {
   width: 1349px;
 }
-.ie8 .wrap .main .business p a {
+.ie8 .wrap .main .main-business p a {
   margin: 0 1px 0 0;
 }

@@ -11,3 +11,6 @@ function ieVersion(){
         }
     };
 }
+$(function(){
+    ieVersion();
+});
