@@ -1,2 +1,76 @@
+@import url('base.css');
 @charset "uft-8";
-/*# sourceMappingURL=common.css.map */
+.vertical-line {
+  border-right: 1px solid #757575;
+}
+.wrap {
+  min-width: 1349px;
+  font-family: "\5FAE\8F6F\96C5\9ED1";
+}
+.wrap .nav {
+  line-height: 60px;
+  font-size: 16px;
+  background: #fff;
+  *zoom: 1;
+}
+.wrap .nav:after {
+  display: block;
+  overflow: hidden;
+  clear: both;
+  height: 0;
+  visibility: hidden;
+  content: ".";
+}
+.wrap .nav .nav-img {
+  float: left;
+  margin: 0 0 0 82px;
+}
+.wrap .nav .nav-img img {
+  vertical-align: middle;
+}
+.wrap .nav .nav-list {
+  float: right;
+  margin: 0 82px 0 0;
+}
+.wrap .nav .nav-list a {
+  float: left;
+  width: 100px;
+  color: #424242;
+  text-align: center;
+}
+.wrap .nav .nav-list a.active {
+  background: #42A5F5;
+  color: #fff;
+}
+.wrap .footer {
+  line-height: 50px;
+  font-size: 14px;
+  color: #757575;
+  *zoom: 1;
+}
+.wrap .footer:after {
+  display: block;
+  overflow: hidden;
+  clear: both;
+  height: 0;
+  visibility: hidden;
+  content: ".";
+}
+.wrap .footer .footer-right {
+  float: left;
+  margin: 0 0 0 82px;
+}
+.wrap .footer .footer-right span {
+  display: inline-block;
+  line-height: 1em;
+  padding: 0 10px 0 5px;
+}
+.wrap .footer .footer-link {
+  float: right;
+  margin: 0 82px 0 0;
+}
+.wrap .footer .footer-link a {
+  display: inline-block;
+  line-height: 1em;
+  padding: 0 10px 0 7px;
+}

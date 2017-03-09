@@ -1,1 +1,84 @@
 @charset "uft-8";
+@import url('base.css');
+.clearfix() {
+    //清浮动
+    *zoom: 1;
+    &:after {
+        display: block;
+        overflow: hidden;
+        clear: both;
+        height: 0;
+        visibility: hidden;
+        content: ".";
+    }
+}
+@fc42: #424242;
+@fc75: #757575;
+
+// 竖线
+.vertical-line{
+    border-right: 1px solid #757575;
+}
+
+.wrap {
+    min-width: 1366-17px;
+    font-family: "\5FAE\8F6F\96C5\9ED1";
+    // 导航
+    .nav {
+        line-height: 60px;
+        font-size: 16px;
+        background: #fff;
+        .clearfix();
+        // logo
+        .nav-img {
+            float: left;
+            margin: 0 0 0 82px;
+            img {
+                vertical-align: middle;
+            }
+        }
+        // 导航内容
+        .nav-list {
+            float: right;
+            margin: 0 82px 0 0;
+            a {
+                float: left;
+                width: 100px;
+                color: @fc42;
+                text-align: center;
+                &.active {
+                    background: #42A5F5;
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    // 底部
+    .footer {
+        line-height: 50px;
+        font-size: 14px;
+        color: @fc75;
+        .clearfix();
+        // 版权备案
+        .footer-right{
+            float: left;
+            margin: 0 0 0 82px;
+            span{
+                display:inline-block;
+                line-height:1em;
+                padding: 0 10px 0 5px;
+            }
+        }
+        // 链接
+        .footer-link{
+            float: right;
+            margin:0 82px 0 0;
+            a{
+                display:inline-block;
+                line-height:1em;
+                padding: 0 10px 0 7px;
+            }
+        }
+    }
+}
