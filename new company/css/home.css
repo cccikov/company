@@ -1,10 +1,15 @@
 @charset "utf-8";
+h5 {
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  color: #757575;
+}
 .wrap .carousel {
   background: #fbfbfb;
 }
 .wrap .carousel .swiper-container {
   position: relative;
-  width: 1366px;
   height: 340px;
 }
 .wrap .carousel .swiper-container .swiper-slide img {
@@ -30,12 +35,6 @@
   width: 40px;
   background: #42A5F5;
 }
-.wrap .main h5 {
-  font-size: 20px;
-  font-weight: 700;
-  text-align: center;
-  color: #757575;
-}
 .wrap .main .main-business h5 {
   margin: 28px 0 22px;
 }
@@ -57,6 +56,9 @@
 .wrap .main .main-business p a.no-margin {
   margin: 0;
 }
+.wrap .main .main-product h5 {
+  margin: 4px 0 28px;
+}
 .wrap .main .main-product .product-list {
   *zoom: 1;
 }
@@ -74,7 +76,7 @@
   width: 666px;
   height: 200px;
   overflow: hidden;
-  border: 1px solid #ccc;
+  border: 1px solid #fbfbfb;
   margin-bottom: 30px;
 }
 .wrap .main .main-product .product-list .product-item:nth-of-type(2n+2) {
@@ -93,17 +95,79 @@
 }
 .wrap .main .main-product .product-list .product-item .item-right {
   overflow: hidden;
+  padding: 0 0  0 24px;
+}
+.wrap .main .main-product .product-list .product-item .item-right h6 {
+  font-size: 16px;
+  line-height: 32px;
+  padding: 10px 0 0 ;
+  color: #424242;
+}
+.wrap .main .main-product .product-list .product-item .item-right h6 span {
+  display: inline-block;
+  line-height: 1em;
+  padding: 0 0 0 3px;
+}
+.wrap .main .main-product .product-list .product-item .item-right h6 span.vertical-line {
+  padding: 0 8px 0 0;
 }
 .wrap .main .main-product .product-list .product-item .item-right p {
-  padding: 0 0 0 8px;
+  line-height: 24px;
+  padding: 0 0 0 12px;
   background: url(../img/home/point2.png) left 2px center no-repeat;
+  color: #757575;
 }
-.wrap .footer {
-  height: 75px;
+.wrap .footer .footer-wrap {
+  padding: 20px 0;
+}
+.wrap .footer .footer-wrap .footer-news .footer-news-top {
+  position: relative;
+}
+.wrap .footer .footer-wrap .footer-news .footer-news-top h5 {
+  margin: 0 0 9px;
+}
+.wrap .footer .footer-wrap .footer-news .footer-news-top a {
+  position: absolute;
+  bottom: -5px;
+  right: 8px;
+}
+.wrap .footer .footer-wrap .footer-news .footer-news-list {
+  line-height: 35px;
+  padding: 0 0 12px;
+  border-bottom: 2px solid #eee;
+  margin: 0 0 12px;
+  font-size: 14px;
+  *zoom: 1;
+}
+.wrap .footer .footer-wrap .footer-news .footer-news-list:after {
+  display: block;
+  overflow: hidden;
+  clear: both;
+  height: 0;
+  visibility: hidden;
+  content: ".";
+}
+.wrap .footer .footer-wrap .footer-news .footer-news-list .footer-news-item {
+  float: left;
+  width: 668px;
+  background: url(../img/home/point.png) center repeat-x;
+}
+.wrap .footer .footer-wrap .footer-news .footer-news-list .footer-news-item:nth-of-type(2n+2) {
+  margin: 0 0 0 30px;
+}
+.wrap .footer .footer-wrap .footer-news .footer-news-list .footer-news-item .news-title {
+  float: left;
+  padding: 0 8px 0 0;
+  background: #fbfbfb;
+}
+.wrap .footer .footer-wrap .footer-news .footer-news-list .footer-news-item .news-date {
+  float: right;
+  padding: 0 0 0 8px;
+  background: #fbfbfb;
+}
+.wrap .footer .footer-wrap .footer-link,
+.wrap .footer .footer-wrap .footer-right {
   line-height: 30px;
-  padding: 20px 0 0;
-}
-.wrap .footer p {
   float: none;
   margin: 0;
   text-align: center;
@@ -115,10 +179,30 @@
   .wrap .main .main-business p a {
     margin: 0 1px 0 0;
   }
+  .wrap .main .main-product .product-list .product-item {
+    width: 575px;
+  }
+  .wrap .footer .footer-wrap .footer-news .footer-news-list .footer-news-item {
+    width: 577px;
+  }
 }
 .ie8 .wrap .carousel .swiper-container {
   width: 1349px;
 }
 .ie8 .wrap .main .main-business p a {
   margin: 0 1px 0 0;
+}
+.ie8 .wrap .main .main-product .product-list .product-item {
+  width: 575px;
+}
+.ie8 .wrap .footer .footer-wrap .footer-news .footer-news-list .footer-news-item {
+  width: 577px;
+}
+.ie8 .wrap .main .main-product .product-list .product-item {
+  margin-left: 7px;
+  margin-right: 7px;
+}
+.ie8 .wrap .footer .footer-wrap .footer-news .footer-news-list .footer-news-item {
+  margin-left: 7px;
+  margin-right: 7px;
 }

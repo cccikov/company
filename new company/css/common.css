@@ -41,11 +41,20 @@
   background: #42A5F5;
   color: #fff;
 }
+.carousel {
+  background: #fbfbfb;
+}
+.carousel .carousel-wrap {
+  width: 1366px;
+}
 .main {
   width: 1366px;
   margin: 0 auto;
 }
 .footer {
+  background: #fbfbfb;
+}
+.footer .footer-wrap {
   width: 1366px;
   line-height: 50px;
   margin: 0 auto;
@@ -53,7 +62,7 @@
   color: #757575;
   *zoom: 1;
 }
-.footer:after {
+.footer .footer-wrap:after {
   display: block;
   overflow: hidden;
   clear: both;
@@ -61,25 +70,24 @@
   visibility: hidden;
   content: ".";
 }
-.footer .footer-right {
+.footer .footer-wrap .footer-right {
   float: left;
 }
-.footer .footer-right span {
+.footer .footer-wrap .footer-right span {
   display: inline-block;
   line-height: 1em;
   padding: 0 10px 0 5px;
 }
-.footer .footer-link {
+.footer .footer-wrap .footer-link {
   float: right;
 }
-.footer .footer-link a {
+.footer .footer-wrap .footer-link a {
   display: inline-block;
   line-height: 1em;
   padding: 0 10px 0 7px;
 }
 @media screen and (max-width: 1383px) {
   .wrap {
-    width: 1349px;
     margin: 0 auto;
   }
   .wrap .nav {
@@ -92,14 +100,13 @@
     padding: 0 82px;
     margin: 0 auto;
   }
-  .wrap .footer {
+  .wrap .footer .footer-wrap {
     width: 1185px;
     padding: 0 82px;
     margin: 0 auto;
   }
 }
 .ie8 .wrap {
-  width: 1349px;
   margin: 0 auto;
 }
 .ie8 .wrap .nav {
@@ -112,7 +119,7 @@
   padding: 0 82px;
   margin: 0 auto;
 }
-.ie8 .wrap .footer {
+.ie8 .wrap .footer .footer-wrap {
   width: 1185px;
   padding: 0 82px;
   margin: 0 auto;

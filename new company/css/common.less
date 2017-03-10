@@ -55,6 +55,13 @@
     }
 }
 
+.carousel{
+    background: #fbfbfb;
+    .carousel-wrap{
+        width:1366px;
+    }
+}
+
 .main{
     width:1366px;
     margin:0 auto;
@@ -62,35 +69,37 @@
 
 // 底部
 .footer {
-    width:1366px;
-    line-height: 50px;
-    margin: 0 auto;
-    font-size: 14px;
-    color: @fc75;
-    .clearfix();
-    // 底部版权备案
-    .footer-right{
-        float: left;
-        span{
-            display:inline-block;
-            line-height:1em;
-            padding: 0 10px 0 5px;
+    background: #fbfbfb;
+    .footer-wrap{
+        width:1366px;
+        line-height: 50px;
+        margin: 0 auto;
+        font-size: 14px;
+        color: @fc75;
+        .clearfix();
+        // 底部版权备案
+        .footer-right{
+            float: left;
+            span{
+                display:inline-block;
+                line-height:1em;
+                padding: 0 10px 0 5px;
+            }
         }
-    }
-    // 底部链接
-    .footer-link{
-        float: right;
-        a{
-            display:inline-block;
-            line-height:1em;
-            padding: 0 10px 0 7px;
+        // 底部链接
+        .footer-link{
+            float: right;
+            a{
+                display:inline-block;
+                line-height:1em;
+                padding: 0 10px 0 7px;
+            }
         }
     }
 }
 
 .narrow(){//窄 ie8
     .wrap{
-        width: 1366-17px;
         margin:0 auto;
         .nav{
             width:1366-17-82-82px;
@@ -103,9 +112,11 @@
             margin: 0 auto;
         }
         .footer{
-            width:1366-17-82-82px;
-            padding:0 82px;
-            margin: 0 auto;
+            .footer-wrap{
+                width:1366-17-82-82px;
+                padding:0 82px;
+                margin: 0 auto;
+            }
         }
     }
 }

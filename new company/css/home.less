@@ -12,6 +12,13 @@
     }
 }
 
+h5 {
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    color: #757575;
+}
+
 .wrap {
     // 轮播
     .carousel {
@@ -19,7 +26,6 @@
         // 轮播插件
         .swiper-container {
             position: relative;
-            width: 1366px;
             height: 340px;
             .swiper-slide {
                 img {
@@ -50,12 +56,6 @@
     }
     // 主要
     .main {
-        h5 {
-            font-size: 20px;
-            font-weight: 700;
-            text-align: center;
-            color: #757575;
-        }
         // 业务覆盖
         .main-business {
             h5{
@@ -74,6 +74,9 @@
         }
         // 主营产品
         .main-product{
+            h5{
+                margin: 4px 0 28px;
+            }
             // 主营产品列表
             .product-list{
                 .clearfix();
@@ -83,11 +86,12 @@
                     width:666px;
                     height:200px;
                     overflow:hidden;
-                    border: 1px solid #ccc;
+                    border: 1px solid #fbfbfb;
                     margin-bottom:30px;
                     &:nth-of-type(2n+2){
                         margin-left:30px;
                     }
+                    // 产品图片
                     .item-left{
                         float: left;
                         width: 285px;
@@ -99,11 +103,29 @@
                             vertical-align:middle;
                         }
                     }
+                    // 产品性能
                     .item-right{
                         overflow:hidden;
+                        padding : 0 0  0 24px;
+                        h6{
+                            font-size:16px;
+                            line-height:32px;
+                            padding:10px 0 0 ;
+                            color:#424242;
+                            span{
+                                display:inline-block;
+                                line-height:1em;
+                                padding: 0 0 0 3px;
+                                &.vertical-line{
+                                    padding: 0 8px 0 0;
+                                }
+                            }
+                        }
                         p{
-                            padding: 0 0 0 8px;
+                            line-height:24px;
+                            padding: 0 0 0 12px;
                             background: url(../img/home/point2.png) left 2px center no-repeat;
+                            color:#757575;
                         }
                     }
                 }
@@ -112,13 +134,53 @@
     }
     // 底部
     .footer {
-        height: 75px;
-        line-height: 30px;
-        padding: 20px 0 0;
-        p {
-            float: none;
-            margin: 0;
-            text-align: center;
+        .footer-wrap{
+            padding: 20px 0;
+            .footer-news{
+                .footer-news-top{
+                    position:relative;
+                    h5{
+                        margin: 0 0 9px;
+                    }
+                    a{
+                        position:absolute;
+                        bottom:-5px;
+                        right:8px;
+                    }
+                }
+                .footer-news-list{
+                    line-height:35px;
+                    padding: 0 0 12px;
+                    border-bottom: 2px solid #eee;
+                    margin: 0 0 12px;
+                    font-size:14px;
+                    .clearfix();
+                    .footer-news-item{
+                        float: left;
+                        width:668px;
+                        background: url(../img/home/point.png) center repeat-x;
+                        &:nth-of-type(2n+2){
+                            margin: 0 0 0 30px;
+                        }
+                        .news-title{
+                            float: left;
+                            padding:0 8px 0 0;
+                            background: #fbfbfb;
+                        }
+                        .news-date{
+                            float: right;
+                            padding:0 0 0 8px;
+                            background: #fbfbfb;
+                        }
+                    }
+                }
+            }
+            .footer-link,.footer-right{
+                line-height: 30px;
+                float: none;
+                margin: 0;
+                text-align: center;
+            }
         }
     }
 }
@@ -168,18 +230,61 @@
                     }
                 }
             }
+            .main-product{
+               .product-list{
+                    .product-item{
+                        width:575px;
+                    }
+               }
+            }
         }
         // 底部
         .footer {
-
+            .footer-wrap{
+                .footer-news{
+                    .footer-news-list{
+                        .footer-news-item{
+                            width:577px;
+                        }
+                    }
+                }
+            }
         }
     }
 }
 
+
+//1383以上宽度 内容宽度为1366 17px是滚动条
+// 1366
+
+// 1383以下的,由于是给1366屏幕使用,所以内容宽度为1366-17(滚动条)-82*2(padding,为了与不贴紧屏幕)
+// 1185
 @media screen and (max-width: 1383px) {
     .narrow()
 }
 
 .ie8 {
     .narrow();
+    .wrap .main .main-product{
+        .product-list{
+            .product-item{
+                margin-left:7px;
+                margin-right:7px;
+            }
+       }
+    }
+    .wrap{
+        .footer {
+            .footer-wrap{
+                .footer-news{
+                    .footer-news-list{
+                        .footer-news-item{
+                            margin-left:7px;
+                            margin-right:7px;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
