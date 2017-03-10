@@ -1,0 +1,38 @@
+@charset "utf-8";
+.clearfix() {
+    //清浮动
+    *zoom: 1;
+    &:after {
+        display: block;
+        overflow: hidden;
+        clear: both;
+        height: 0;
+        visibility: hidden;
+        content: ".";
+    }
+}
+.wrap{
+    // 主要
+    .main{
+        padding:30px 0;
+    }
+}
+
+
+.narrow() {
+
+}
+
+
+//1383以上宽度 内容宽度为1366 17px是滚动条
+// 1366
+
+// 1383以下的,由于是给1366屏幕使用,所以内容宽度为1366-17(滚动条)-82*2(padding,为了与不贴紧屏幕)
+// 1185
+@media screen and (max-width: 1383px) {
+    .narrow()
+}
+
+.ie8 {
+
+}

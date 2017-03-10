@@ -199,10 +199,8 @@ h5 {
   width: 577px;
 }
 .ie8 .wrap .main .main-product .product-list .product-item {
-  margin-left: 7px;
-  margin-right: 7px;
+  margin: 7px;
 }
 .ie8 .wrap .footer .footer-wrap .footer-news .footer-news-list .footer-news-item {
-  margin-left: 7px;
-  margin-right: 7px;
+  margin: 7px;
 }

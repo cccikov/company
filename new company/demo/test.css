@@ -1,7 +1,7 @@
 p {
   width: 50%;
   overflow: hidden;
-  background: url(../img/point.png) center repeat-x;
+  background: url(../img/home/point.png) center repeat-x;
 }
 p span {
   background: #fff;
