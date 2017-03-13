@@ -19,6 +19,8 @@ h5 {
     color: #757575;
 }
 
+
+
 .wrap {
     // 轮播
     .carousel {
@@ -77,56 +79,11 @@ h5 {
             h5{
                 margin: 4px 0 28px;
             }
-            // 主营产品列表
-            .product-list{
-                .clearfix();
-                .product-item{
-                    display:block;
-                    float: left;
-                    width:666px;
-                    height:200px;
-                    overflow:hidden;
-                    border: 1px solid #fbfbfb;
-                    margin-bottom:30px;
-                    &:nth-of-type(2n+2){
-                        margin-left:30px;
-                    }
-                    // 产品图片
-                    .item-left{
-                        float: left;
+            .product-list {
+                .product-item {
+                    width: 666px;
+                    .item-left {
                         width: 285px;
-                        line-height:200px;
-                        text-align: center;
-                        img{
-                            max-width:100%;
-                            max-height:200px;
-                            vertical-align:middle;
-                        }
-                    }
-                    // 产品性能
-                    .item-right{
-                        overflow:hidden;
-                        padding : 0 0  0 24px;
-                        h6{
-                            font-size:16px;
-                            line-height:32px;
-                            padding:10px 0 0 ;
-                            color:#424242;
-                            span{
-                                display:inline-block;
-                                line-height:1em;
-                                padding: 0 0 0 3px;
-                                &.vertical-line{
-                                    padding: 0 8px 0 0;
-                                }
-                            }
-                        }
-                        p{
-                            line-height:24px;
-                            padding: 0 0 0 12px;
-                            background: url(../img/home/point2.png) left 2px center no-repeat;
-                            color:#757575;
-                        }
                     }
                 }
             }

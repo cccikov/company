@@ -1,5 +1,9 @@
 @import url('base.css');
 @charset "uft-8";
+html,
+body {
+  font-family: "\5FAE\8F6F\96C5\9ED1";
+}
 .vertical-line {
   border-right: 1px solid #757575;
 }
@@ -8,8 +12,90 @@ iframe {
   width: 100%;
   border: none;
 }
-.wrap {
-  font-family: "\5FAE\8F6F\96C5\9ED1";
+.product-list {
+  *zoom: 1;
+}
+.product-list:after {
+  display: block;
+  overflow: hidden;
+  clear: both;
+  height: 0;
+  visibility: hidden;
+  content: ".";
+}
+.product-list .product-item {
+  display: block;
+  float: left;
+  height: 200px;
+  overflow: hidden;
+  border: 1px solid #fbfbfb;
+  margin-bottom: 30px;
+}
+.product-list .product-item:nth-of-type(2n+2) {
+  margin-left: 30px;
+}
+.product-list .product-item .item-left {
+  float: left;
+  line-height: 200px;
+  text-align: center;
+}
+.product-list .product-item .item-left img {
+  max-width: 100%;
+  max-height: 200px;
+  vertical-align: middle;
+}
+.product-list .product-item .item-right {
+  overflow: hidden;
+  padding: 0 0  0 24px;
+}
+.product-list .product-item .item-right h6 {
+  font-size: 16px;
+  line-height: 32px;
+  padding: 10px 0 0 ;
+  color: #424242;
+}
+.product-list .product-item .item-right h6 span {
+  display: inline-block;
+  line-height: 1em;
+  padding: 0 0 0 3px;
+}
+.product-list .product-item .item-right h6 span.vertical-line {
+  padding: 0 8px 0 0;
+}
+.product-list .product-item .item-right p {
+  line-height: 24px;
+  padding: 0 0 0 12px;
+  background: url(../img/home/point2.png) left 2px center no-repeat;
+  color: #757575;
+}
+.page {
+  margin: 0 17px 0 0;
+  *zoom: 1;
+}
+.page:after {
+  display: block;
+  overflow: hidden;
+  clear: both;
+  height: 0;
+  visibility: hidden;
+  content: ".";
+}
+.page .page-wrap {
+  float: right;
+}
+.page .page-wrap a {
+  float: left;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  background: #fbfbfb;
+  color: #bdbdbd;
+  text-align: center;
+  margin: 0 0 0 5px;
+}
+.page .page-wrap a.active {
+  background: #42a5f5;
+  color: #fff;
 }
 .nav {
   width: 1366px;
@@ -53,6 +139,9 @@ iframe {
   width: 1366px;
   margin: 0 auto;
 }
+.carousel .carousel-wrap img {
+  max-width: 100%;
+}
 .main {
   width: 1366px;
   margin: 0 auto;
@@ -69,12 +158,18 @@ iframe {
 .main .main-left {
   float: left;
   width: 180px;
-  margin-right: 30px;
+  margin-right: 13px;
   height: 300px;
   background: #f0f0f0;
 }
+.main .main-left a {
+  display: block;
+  line-height: 3em;
+}
 .main .main-right {
   overflow: hidden;
+  position: relative;
+  left: 17px;
 }
 .footer {
   background: #fbfbfb;
@@ -121,6 +216,9 @@ iframe {
     padding-right: 82px;
     margin: 0 auto;
   }
+  .wrap .carousel .carousel-wrap {
+    width: 1349px;
+  }
   .wrap .main {
     width: 1185px;
     padding-left: 82px;
@@ -142,6 +240,9 @@ iframe {
   padding-left: 82px;
   padding-right: 82px;
   margin: 0 auto;
+}
+.ie8 .wrap .carousel .carousel-wrap {
+  width: 1349px;
 }
 .ie8 .wrap .main {
   width: 1185px;

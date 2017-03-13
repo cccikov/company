@@ -15,20 +15,21 @@ function ieVersion() {
 // iframe高度;
 function frameHeight(){
     ifrMinH = $(window).height()-350-30-30-50;
-    if($("#ifr").size()>0){
-        $("#ifr").css({
-            "min-height":ifrMinH,
-            "opacity":"0"
-        });//最小高度
+    var ifr = document.getElementById("ifr");
+    if(ifr){
+        ifr.style.minHeight=ifrMinH+"px";
+        ifr.onload = function(){
+            resetFrameH(this);
+        }
     }
-    $("#ifr").on("load", function() {
-        var that = $(this).css("opacity","1");
-        var ifrH = $(window.frames['ifr'].document.body)[0].scrollHeight;//跨域会不行
-        that.height(ifrH);
-    });
+}
+function resetFrameH(frame){
+    frame.style.height = frame.contentDocument.body.offsetHeight+"px";//跨域会不行
 }
 
 $(function() {
     ieVersion();
-    frameHeight();
+    if($("iframe").size()>0){
+        frameHeight();
+    }
 });

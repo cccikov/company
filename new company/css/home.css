@@ -59,63 +59,11 @@ h5 {
 .wrap .main .main-product h5 {
   margin: 4px 0 28px;
 }
-.wrap .main .main-product .product-list {
-  *zoom: 1;
-}
-.wrap .main .main-product .product-list:after {
-  display: block;
-  overflow: hidden;
-  clear: both;
-  height: 0;
-  visibility: hidden;
-  content: ".";
-}
 .wrap .main .main-product .product-list .product-item {
-  display: block;
-  float: left;
   width: 666px;
-  height: 200px;
-  overflow: hidden;
-  border: 1px solid #fbfbfb;
-  margin-bottom: 30px;
-}
-.wrap .main .main-product .product-list .product-item:nth-of-type(2n+2) {
-  margin-left: 30px;
 }
 .wrap .main .main-product .product-list .product-item .item-left {
-  float: left;
   width: 285px;
-  line-height: 200px;
-  text-align: center;
-}
-.wrap .main .main-product .product-list .product-item .item-left img {
-  max-width: 100%;
-  max-height: 200px;
-  vertical-align: middle;
-}
-.wrap .main .main-product .product-list .product-item .item-right {
-  overflow: hidden;
-  padding: 0 0  0 24px;
-}
-.wrap .main .main-product .product-list .product-item .item-right h6 {
-  font-size: 16px;
-  line-height: 32px;
-  padding: 10px 0 0 ;
-  color: #424242;
-}
-.wrap .main .main-product .product-list .product-item .item-right h6 span {
-  display: inline-block;
-  line-height: 1em;
-  padding: 0 0 0 3px;
-}
-.wrap .main .main-product .product-list .product-item .item-right h6 span.vertical-line {
-  padding: 0 8px 0 0;
-}
-.wrap .main .main-product .product-list .product-item .item-right p {
-  line-height: 24px;
-  padding: 0 0 0 12px;
-  background: url(../img/home/point2.png) left 2px center no-repeat;
-  color: #757575;
 }
 .wrap .footer .footer-wrap {
   padding: 20px 0;
