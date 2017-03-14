@@ -9,3 +9,84 @@
   font-size: 14px;
   color: #757575;
 }
+.aboutcontact {
+  color: #757575;
+}
+.aboutcontact h4 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 24px;
+}
+.aboutcontact .major {
+  position: relative;
+  font-size: 14px;
+}
+.aboutcontact .major p {
+  line-height: 1em;
+  margin: 15px 0;
+}
+.aboutcontact .major .major-content {
+  margin: 0 0 30px;
+}
+.aboutcontact .major .map {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 480px;
+  height: 300px;
+  background: #fbfbfb;
+}
+.aboutcontact .minor {
+  *zoom: 1;
+}
+.aboutcontact .minor:after {
+  display: block;
+  overflow: hidden;
+  clear: both;
+  height: 0;
+  visibility: hidden;
+  content: ".";
+}
+.aboutcontact .minor .minor-left {
+  float: left;
+  width: 230px;
+  margin: 0 30px 0 0;
+}
+.aboutcontact .minor .minor-left input {
+  line-height: 38px;
+}
+.aboutcontact .minor .minor-right {
+  overflow: hidden;
+}
+.aboutcontact .minor label {
+  position: relative;
+  display: block;
+  border: 1px solid #eee;
+  background: #fbfbfb;
+  margin: 0 0 30px;
+}
+.aboutcontact .minor span {
+  position: absolute;
+  top: 10.5px;
+  left: 14px;
+}
+.aboutcontact .minor input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 0 0 59px;
+  background: #fbfbfb;
+  border: none;
+  color: inherit;
+}
+.aboutcontact .minor textarea {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  height: 108px;
+  line-height: 1.5em;
+  padding: 10px 10px 10px 59px;
+  background: #fbfbfb;
+  border: none;
+  resize: none;
+  color: inherit;
+}

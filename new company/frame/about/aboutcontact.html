@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>联系我们</title>
+    <link rel="stylesheet" type="text/css" href="../../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../../css/about.css">
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=kuLkqU7eniGuCmSeOFQOQOBNAaqO18RX"></script>
+</head>
+
+<body>
+    <div class="aboutcontact frame-wrap">
+        <div class="major">
+            <div class="major-content">
+                <h4>联系我们</h4>
+                <p>售前咨询电话：0755-12345678</p>
+                <p>售后服务电话：4006-123-321</p>
+                <p>传真：0755-1234 5678</p>
+                <p>邮箱：suibiangai@123.com</p>
+            </div>
+            <div class="major-content">
+                <h4>公司地址</h4>
+                <p>办公地址：深圳南山区南十六路方大大厦88楼</p>
+                <p>工厂地址：深圳市光明新区田寮社区根玉路汉海达高新科技园8栋8楼</p>
+            </div>
+            <div id="map" class="map">
+            </div>
+        </div>
+        <div class="minor">
+            <h4>在线留言</h4>
+            <div class="minor-left">
+                <label>
+                    <span>姓名：</span>
+                    <input type="text" name="">
+                </label>
+                <label>
+                    <span>电话：</span>
+                    <input type="tel" name="">
+                </label>
+            </div>
+            <div class="minor-right">
+                <label>
+                    <span>留言：</span>
+                    <textarea></textarea>
+                </label>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var map = new BMap.Map("map");
+        var point = new BMap.Point(113.069543,23.019206);
+        map.centerAndZoom(point, 15);
+        var marker = new BMap.Marker(point);  // 创建标注
+        map.addOverlay(marker);               // 将标注添加到地图中
+        marker.setAnimation(BMAP_ANIMATION_BOUNCE); //跳动的动画
+    </script>
+</body>
+
+</html>
