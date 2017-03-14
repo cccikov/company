@@ -1,0 +1,11 @@
+@charset "utf-8";
+.wrap .main {
+  padding: 30px 0;
+}
+/* ---------------iframe------------------ */
+.aboutintro p {
+  line-height: 24px;
+  margin: 0 0 23px;
+  font-size: 14px;
+  color: #757575;
+}

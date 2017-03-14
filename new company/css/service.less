@@ -1,0 +1,44 @@
+@charset "utf-8";
+.clearfix() {
+    //清浮动
+    *zoom: 1;
+    &:after {
+        display: block;
+        overflow: hidden;
+        clear: both;
+        height: 0;
+        visibility: hidden;
+        content: ".";
+    }
+}
+.wrap{
+    // 主要
+    .main{
+        padding:30px 0;
+    }
+}
+
+
+/* ---------------iframe------------------ */
+.serviceques{
+    li{
+        p{
+            line-height: 41px;
+            font-size: 14px;
+            color:#757575;
+            &.question{
+                padding: 0 20px;
+                background: #fbfbfb;
+                &:before{
+                    content:"Q : ";
+                }
+            }
+            &.answer{
+                padding:0 20px 0 60px;
+                &:before{
+                    content:"A : ";
+                }
+            }
+        }
+    }
+}

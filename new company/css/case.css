@@ -1,0 +1,42 @@
+@charset "utf-8";
+.wrap .main {
+  padding: 30px 0;
+}
+/* ---------------iframe------------------ */
+.casetypical li {
+  border: 1px solid #fbfbfb;
+  margin: 0 0 30px;
+  *zoom: 1;
+}
+.casetypical li:after {
+  display: block;
+  overflow: hidden;
+  clear: both;
+  height: 0;
+  visibility: hidden;
+  content: ".";
+}
+.casetypical li .img {
+  float: left;
+  width: 230px;
+  line-height: 156px;
+  text-align: center;
+  margin: 0 20px 0 0;
+}
+.casetypical li .img img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+.casetypical li .content {
+  overflow: hidden;
+}
+.casetypical li .content h6 {
+  margin: 18px 0 15px;
+  font-size: 17px;
+  color: #424242;
+}
+.casetypical li .content p {
+  font-size: 13px;
+  color: #757575;
+  line-height: 24px;
+}

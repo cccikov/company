@@ -1,0 +1,53 @@
+@charset "utf-8";
+.clearfix() {
+    //清浮动
+    *zoom: 1;
+    &:after {
+        display: block;
+        overflow: hidden;
+        clear: both;
+        height: 0;
+        visibility: hidden;
+        content: ".";
+    }
+}
+.wrap{
+    // 主要
+    .main{
+        padding:30px 0;
+    }
+}
+
+
+/* ---------------iframe------------------ */
+.casetypical{
+    li{
+        border:1px solid #fbfbfb;
+        margin: 0 0 30px;
+        .clearfix();
+        .img{
+            float: left;
+            width: 230px;
+            line-height: 156px;
+            text-align: center;
+            margin: 0 20px 0 0;
+            img{
+                max-width: 100%;
+                vertical-align: middle;
+            }
+        }
+        .content{
+            overflow:hidden;
+            h6{
+                margin:18px 0 15px;
+                font-size: 17px;
+                color:#424242;
+            }
+            p{
+                font-size:13px;
+                color:#757575;
+                line-height:24px;
+            }
+        }
+    }
+}

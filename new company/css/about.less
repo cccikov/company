@@ -1,0 +1,30 @@
+@charset "utf-8";
+.clearfix() {
+    //清浮动
+    *zoom: 1;
+    &:after {
+        display: block;
+        overflow: hidden;
+        clear: both;
+        height: 0;
+        visibility: hidden;
+        content: ".";
+    }
+}
+.wrap{
+    // 主要
+    .main{
+        padding:30px 0;
+    }
+}
+
+
+/* ---------------iframe------------------ */
+.aboutintro{
+    p{
+        line-height: 24px;
+        margin:0 0 23px;
+        font-size: 14px;
+        color:#757575;
+    }
+}

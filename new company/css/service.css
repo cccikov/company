@@ -1,0 +1,23 @@
+@charset "utf-8";
+.wrap .main {
+  padding: 30px 0;
+}
+/* ---------------iframe------------------ */
+.serviceques li p {
+  line-height: 41px;
+  font-size: 14px;
+  color: #757575;
+}
+.serviceques li p.question {
+  padding: 0 20px;
+  background: #fbfbfb;
+}
+.serviceques li p.question:before {
+  content: "Q : ";
+}
+.serviceques li p.answer {
+  padding: 0 20px 0 60px;
+}
+.serviceques li p.answer:before {
+  content: "A : ";
+}

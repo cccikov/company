@@ -24,7 +24,7 @@ function frameHeight(){
     }
 }
 function resetFrameH(frame){
-    frame.style.height = frame.contentDocument.body.offsetHeight+"px";//跨域会不行
+    frame.height = frame.contentDocument.body.offsetHeight;//跨域会不行
 }
 
 $(function() {
