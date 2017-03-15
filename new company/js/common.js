@@ -13,23 +13,48 @@ function ieVersion() {
     };
 }
 // iframe高度;
-function frameHeight(){
-    ifrMinH = $(window).height()-350-30-30-50;
+function frameHeight() {
+    ifrMinH = $(window).height() - 350 - 30 - 30 - 40;
     var ifr = document.getElementById("ifr");
-    if(ifr){
-        ifr.style.minHeight=ifrMinH+"px";
-        ifr.onload = function(){
+    if (ifr) {
+        ifr.style.minHeight = ifrMinH + "px";
+        ifr.onload = function() {
             resetFrameH(this);
         }
     }
 }
-function resetFrameH(frame){
-    frame.height = frame.contentDocument.body.offsetHeight;//跨域会不行
+
+function resetFrameH(frame) {
+    frame.height = frame.contentDocument.body.offsetHeight; //跨域会不行
+}
+
+// 菜单
+function Menu(obj) {
+    Menu.prototype.init = function() {
+        var menu = this.menu;
+        menu.find("a").on("click",function(){
+            console.log(menu.find("a.active"));
+            menu.find("a.active").removeClass("active");
+            $(this).addClass("active");
+        });
+        menu.find(".first").on("click",function(){
+            menu.find(".first.active").removeClass("active");
+            $(this).addClass("active");
+        });
+    }
+    Menu.prototype.firstClick = function(){
+        this.menu.find("a")[0].click();
+    }
+    this.menu = obj;
+    this.init();
 }
 
 $(function() {
     ieVersion();
-    if($("iframe").size()>0){
+    if ($("iframe").size() > 0) {
         frameHeight();
+        var menu = new Menu($(".menu"));
+        menu.firstClick();
     }
+
 });
