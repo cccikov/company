@@ -28,6 +28,14 @@ function resetFrameH(frame) {
     frame.height = frame.contentDocument.body.offsetHeight; //跨域会不行
 }
 
+function getUrlParam (name) {
+    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i"); //以 name 开头或者以 "&"+name 开头，中间是 "=" + 若干个非&的字符 ,后面是结尾 或者 以 "&"结尾
+    var r = window.location.search.substr(1).match(reg);
+    if (r != null) {
+        return unescape(r[2]);
+    }
+    return null;
+}
 // 菜单
 function Menu(obj) {
     Menu.prototype.init = function() {
@@ -50,8 +58,13 @@ function Menu(obj) {
             parent.attr("data-h",h);
         });
     }
-    Menu.prototype.firstClick = function(){
-        this.menu.find("a")[0].click();
+    Menu.prototype.clickandskip = function(str){
+        this.menu.find(str)[0].click();
+    }
+    Menu.prototype.clicknoskip = function(str){
+        var that = this.menu.find(str);
+        this.menu.find(".active").removeClass("active");
+        that.addClass("active").parents(".first").addClass("active");
     }
     this.menu = obj;
     this.init();
@@ -59,10 +72,4 @@ function Menu(obj) {
 
 $(function() {
     ieVersion();
-    if ($("iframe").size() > 0) {
-        frameHeight();
-        var menu = new Menu($(".menu"));
-        menu.firstClick();
-    }
-
 });

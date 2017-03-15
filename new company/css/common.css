@@ -132,6 +132,10 @@ iframe {
   background: #42a5f5;
   color: #fff;
 }
+.page .page-wrap .next {
+  width: auto;
+  padding: 0 8px;
+}
 .nav {
   width: 1366px;
   line-height: 60px;
