@@ -33,13 +33,21 @@ function Menu(obj) {
     Menu.prototype.init = function() {
         var menu = this.menu;
         menu.find("a").on("click",function(){
-            console.log(menu.find("a.active"));
             menu.find("a.active").removeClass("active");
             $(this).addClass("active");
         });
         menu.find(".first").on("click",function(){
-            menu.find(".first.active").removeClass("active");
-            $(this).addClass("active");
+            var that = $(this).addClass("active");
+            that.siblings(".first").removeClass("active").find(".second").height(0);
+            if(that.attr("data-h")){
+                that.find(".second").height(that.attr("data-h"));
+            }
+        });
+        menu.find(".second").each(function(){
+            var that = $(this);
+            var parent = that.parents(".first");
+            var h = that[0].scrollHeight;
+            parent.attr("data-h",h);
         });
     }
     Menu.prototype.firstClick = function(){

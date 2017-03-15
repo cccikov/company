@@ -90,8 +90,10 @@ iframe {
   cursor: pointer;
 }
 .menu .first .second {
+  height: 0;
+  transition: height 0.15s;
+  overflow: hidden;
   background: #fbfbfb;
-  display: none;
   color: #757575;
 }
 .menu .first.active {
@@ -99,7 +101,7 @@ iframe {
   color: #42a5f5;
 }
 .menu .first.active .second {
-  display: block;
+  height: auto;
 }
 .page {
   margin: 0 17px 0 0;

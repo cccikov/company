@@ -100,15 +100,19 @@ iframe{
             cursor:pointer;
         }
         .second{
+            // display:none;
+            height:0;
+            transition:height 0.15s;
+            overflow:hidden;
+
             background: #fbfbfb;
-            display:none;
             color:#757575;
         }
         &.active{
             background: #fbfbfb;
             color:#42a5f5;
             .second{
-                display:block;
+                height:auto;
             }
         }
     }
