@@ -58,6 +58,17 @@
 .aboutcontact .minor .minor-right {
   overflow: hidden;
 }
+.aboutcontact .minor .minor-bottom {
+  text-align: right;
+}
+.aboutcontact .minor .minor-bottom a {
+  display: inline-block;
+  width: 225px;
+  line-height: 40px;
+  background: #71bcf8;
+  color: #fff;
+  text-align: center;
+}
 .aboutcontact .minor label {
   position: relative;
   display: block;
