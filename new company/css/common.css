@@ -166,7 +166,19 @@ iframe {
   color: #424242;
   text-align: center;
 }
+.nav .nav-list a:hover {
+  background: #42A5F5;
+  color: #fff;
+}
 .nav .nav-list a.active {
+  background: #42A5F5;
+  color: #fff;
+}
+.nav .nav-list:hover a.active {
+  color: #42A5F5;
+  background: #fff;
+}
+.nav .nav-list:hover a.active:hover {
   background: #42A5F5;
   color: #fff;
 }
