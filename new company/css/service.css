@@ -21,3 +21,21 @@
 .serviceques li p.answer:before {
   content: "A : ";
 }
+.serviceafter {
+  text-align: center;
+}
+.serviceafter .part {
+  margin: 40px 0 40px;
+}
+.serviceafter .part div {
+  display: inline-block;
+}
+.serviceafter .part div p {
+  text-align: left;
+  color: #337fe5;
+  font-size: 14px;
+}
+.serviceafter .part div p:before {
+  content: "◆ ";
+  font-family: "SimSun";
+}

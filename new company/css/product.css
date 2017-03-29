@@ -20,6 +20,22 @@
   visibility: hidden;
   content: ".";
 }
+.proddetail .detail h5 {
+  line-height: 40px;
+  padding: 0 0 0 24px;
+  margin: 0 0 30px;
+  background: #fbfbfb;
+  font-size: 16px;
+  color: #424242;
+}
+.proddetail .detail h5 span {
+  display: inline-block;
+  line-height: 1em;
+  padding: 0 0 0 3px;
+}
+.proddetail .detail h5 span.vertical-line {
+  padding: 0 8px 0 0;
+}
 .proddetail .detail .img {
   float: left;
   width: 448px;
@@ -63,6 +79,30 @@
   overflow: hidden;
   display: block;
   padding: 0 0 0 20px;
+}
+.proddetail .detail-intro {
+  margin: 60px 0 0;
+}
+.proddetail .detail-intro .intro-title {
+  line-height: 34px;
+  background: #fbfbfb;
+  border-bottom: 1px solid #42a5f5;
+  *zoom: 1;
+}
+.proddetail .detail-intro .intro-title:after {
+  display: block;
+  overflow: hidden;
+  clear: both;
+  height: 0;
+  visibility: hidden;
+  content: ".";
+}
+.proddetail .detail-intro .intro-title span {
+  float: left;
+  width: 100px;
+  background: #42A5F5;
+  color: #fff;
+  text-align: center;
 }
 .prodtxt {
   text-align: center;
