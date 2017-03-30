@@ -56,6 +56,9 @@ h5 {
 .wrap .main .main-business p a.no-margin {
   margin: 0;
 }
+.wrap .main .main-business p a:last-of-type {
+  margin: 0;
+}
 .wrap .main .main-product h5 {
   margin: 4px 0 28px;
 }
