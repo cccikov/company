@@ -26,8 +26,6 @@ iframe {
 .product-list .product-item {
   display: block;
   float: left;
-  height: 200px;
-  overflow: hidden;
   border: 1px solid #fbfbfb;
   margin-bottom: 30px;
 }
@@ -154,9 +152,14 @@ iframe {
 .nav .nav-img {
   float: left;
 }
+.nav .nav-img a {
+  display: block;
+}
 .nav .nav-img img {
+  display: block;
   vertical-align: middle;
-  max-height: 60px;
+  max-height: 50px;
+  margin: 5px 0;
 }
 .nav .nav-list {
   float: right;

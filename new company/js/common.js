@@ -70,6 +70,29 @@ function Menu(obj) {
     this.init();
 }
 
+/*产品列表左右高度不一致时*/
+function productList(){
+    $(".product-item").each(function(index,key){
+        var that = $(this);
+        var thatHeight = that.height();
+        if(thatHeight>200 && !that.attr("data-change-height")){//高度大于200 且 没有标记的元素
+            if(index%2){//右边
+                var sibling = that.prev();
+            }else{//左边
+                var sibling = that.next();
+            }
+            var sibHeight = sibling.height();
+            if(sibHeight>thatHeight){
+                that.height(sibHeight);
+            }else{
+                sibling.height(thatHeight);
+            }
+            that.add(sibling).attr("data-change-height",true);//增加一个标记，标记已经改变高度了。
+        }
+    });
+}
+
 $(function() {
     ieVersion();
+    productList();
 });
