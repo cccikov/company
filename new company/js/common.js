@@ -72,22 +72,32 @@ function Menu(obj) {
 
 /*产品列表左右高度不一致时*/
 function productList(){
-    $(".product-item").each(function(index,key){
-        var that = $(this);
-        var thatHeight = that.height();
-        if(thatHeight>200 && !that.attr("data-change-height")){//高度大于200 且 没有标记的元素
-            if(index%2){//右边
-                var sibling = that.prev();
-            }else{//左边
-                var sibling = that.next();
-            }
-            var sibHeight = sibling.height();
-            if(sibHeight>thatHeight){
-                that.height(sibHeight);
-            }else{
-                sibling.height(thatHeight);
-            }
-            that.add(sibling).attr("data-change-height",true);//增加一个标记，标记已经改变高度了。
+    // $(".product-list")迭代操作
+    $(".product-list").each(function(){
+        if(!$(this).is(":hidden")){//非隐藏元素
+            // 里面每个(".product-item")迭代操作
+            $(this).find(".product-item").each(function(index,key){
+                var that = $(this).attr("data-num",index)
+                var thatHeight = that[0].scrollHeight;
+                    console.log(thatHeight);
+                if(!that.attr("data-change-height")){//没有标记的元素
+                    if(index%2){//右边
+                        var sibling = that.prev();
+                    }else{//左边
+                        var sibling = that.next();
+                    }
+                    if(sibling[0]){//有sibling
+                        var sibHeight = sibling[0].scrollHeight;
+                        if(sibHeight>thatHeight){
+                            that.height(sibHeight);
+                        }else{
+                            sibling.height(thatHeight);
+                        }
+                        that.add(sibling).attr("data-change-height",true);//增加一个标记，标记已经改变高度了。
+                    }
+                }
+            });
+
         }
     });
 }
