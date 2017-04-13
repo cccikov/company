@@ -11,7 +11,7 @@ $(function(){
         var that = $(this);
         var _index = that.index();
         console.log(_index);
-        $(".product-list").eq(_index).show().siblings().hide();
+        $(".product-list").eq(_index).show().siblings(".product-list").hide();
         productList();//为隐藏元素重设高度
     });
 });
